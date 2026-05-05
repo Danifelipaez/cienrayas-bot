@@ -10,7 +10,7 @@ from core.prompts import SYSTEM_PROMPT, build_fishing_prompt
 genai.configure(api_key=GEMINI_API_KEY)
 
 _model = genai.GenerativeModel(
-    model_name="gemini-1.5-flash",
+    model_name="gemini-2.0-flash",
     system_instruction=SYSTEM_PROMPT,
 )
 
