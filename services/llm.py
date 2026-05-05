@@ -1,22 +1,20 @@
-"""
-LLM: Google Gemini Flash — completamente gratis (1500 req/día, 1M tokens/día).
-Obtener API key en: https://aistudio.google.com/app/apikey
-"""
 import asyncio
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 from config import GEMINI_API_KEY
 from core.prompts import SYSTEM_PROMPT, build_fishing_prompt
 
-genai.configure(api_key=GEMINI_API_KEY)
-
-_model = genai.GenerativeModel(
-    model_name="gemini-2.0-flash",
-    system_instruction=SYSTEM_PROMPT,
-)
+_client = genai.Client(api_key=GEMINI_API_KEY)
+_MODEL = "gemini-2.0-flash"
 
 
 def _call_gemini(prompt: str) -> str:
-    return _model.generate_content(prompt).text
+    response = _client.models.generate_content(
+        model=_MODEL,
+        contents=prompt,
+        config=types.GenerateContentConfig(system_instruction=SYSTEM_PROMPT),
+    )
+    return response.text
 
 
 async def generate_fishing_response(weather: dict, satellite: dict, semaphore_color: str) -> str:
