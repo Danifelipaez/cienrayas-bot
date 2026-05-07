@@ -43,6 +43,7 @@ async def _handle_fishing_query(from_number: str, user_message: str):
             get_satellite_data(),
         )
     except Exception as e:
+        logger.error(f"Error obteniendo datos para {from_number}: {e}")
         await send(from_number,
                    f"Ay compa, no pude conectarme con los datos del clima 😅 "
                    f"Intente en unos minutos. ({e.__class__.__name__})")

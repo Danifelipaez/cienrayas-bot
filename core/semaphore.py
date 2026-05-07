@@ -10,6 +10,13 @@ class SemaphoreResult:
 
 
 def evaluate(weather: dict, satellite: dict) -> SemaphoreResult:
+    if weather.get("fallback"):
+        return SemaphoreResult(
+            "amarillo", "🟡",
+            "No se pudo obtener el clima — salga con precaución",
+            True,
+        )
+
     wind_speed = weather.get("wind_speed", 0) or 0
     wind_gusts = weather.get("wind_gusts", 0) or 0
     precipitation = weather.get("precipitation", 0) or 0
