@@ -14,10 +14,12 @@ def build_fishing_prompt(weather: dict, satellite: dict, semaphore_color: str) -
     sst_src = satellite.get("sst_source", "")
     chl_src = satellite.get("chlorophyll_source", "")
 
+    clima_header = "CLIMA (Open-Meteo) ⚠️ — datos no disponibles, usa precaución:" if weather.get("fallback") else "CLIMA (Open-Meteo):"
+
     return f"""
 Datos ambientales actuales de la Ciénaga Grande de Santa Marta:
 
-CLIMA (Open-Meteo):
+{clima_header}
 - Viento: {weather.get('wind_speed', 'N/A')} km/h del {weather.get('wind_direction_name', 'N/A')}
 - Ráfagas: {weather.get('wind_gusts', 'N/A')} km/h
 - Lluvia actual: {weather.get('precipitation', 'N/A')} mm

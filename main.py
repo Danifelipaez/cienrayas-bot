@@ -8,7 +8,7 @@ Path(MEDIA_DIR).mkdir(exist_ok=True)
 
 app = FastAPI(title="CienRayas", version="1.0.0", docs_url="/docs")
 
-# Servir las imágenes de mapas generados (necesario para Twilio media_url)
+# Servir las imágenes de mapas generados para WhatsApp
 app.mount("/media", StaticFiles(directory=MEDIA_DIR), name="media")
 
 app.include_router(router)

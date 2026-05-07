@@ -86,16 +86,26 @@ async def _handle_fishing_query(from_number: str, user_message: str):
         f"_{result.emoji} {result.reason}_\n"
         f"_Fuentes: NASA · Open-Meteo · {satellite['sst_source']}_"
     )
-    await send(from_number, response_text + footer)
 
-    map_url = f"{BASE_URL}/media/{map_filename}"
-    await send(from_number, "📍 *Mapa de zonas para hoy:*", map_url)
+    try:
+        await send(from_number, response_text + footer)
+    except Exception as e:
+        logger.error(f"Error enviando análisis a {from_number}: {e}")
 
-    await send(
-        from_number,
-        "Compa, ¿cómo le fue hoy? Cuénteme si la zona estaba buena "
-        "para que yo aprenda 🎣",
-    )
+    try:
+        map_url = f"{BASE_URL}/media/{map_filename}"
+        await send(from_number, "📍 *Mapa de zonas para hoy:*", map_url)
+    except Exception as e:
+        logger.error(f"Error enviando mapa a {from_number}: {e}")
+
+    try:
+        await send(
+            from_number,
+            "Compa, ¿cómo le fue hoy? Cuénteme si la zona estaba buena "
+            "para que yo aprenda 🎣",
+        )
+    except Exception as e:
+        logger.error(f"Error enviando pregunta feedback a {from_number}: {e}")
     record_query(from_number)
 
 
