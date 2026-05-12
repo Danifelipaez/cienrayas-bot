@@ -105,8 +105,8 @@ async def _handle_fishing_query(from_number: str, user_message: str):
     try:
         await send(
             from_number,
-            "Compa, ¿cómo le fue hoy? Cuénteme si la zona estaba buena "
-            "para que yo aprenda 🎣",
+            "Cuénteme compa, ¿cómo le fue en la faena hoy? "
+            "¿Pescó bien, la zona estaba buena? Su reporte me ayuda a mejorar las alertas 🙏",
         )
     except Exception as e:
         logger.error(f"Error enviando pregunta feedback a {from_number}: {e}")

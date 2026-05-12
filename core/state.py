@@ -6,10 +6,10 @@ from datetime import datetime
 
 _conversations: dict[str, dict] = {}
 
-FEEDBACK_KEYWORDS = [
-    "bien", "mal", "regular", "buena", "mala", "buenísimo", "malísimo",
-    "pescamos", "no pescamos", "poquito", "bastante", "excelente", "nada",
-    "sí", "no", "si", "lleno", "vacío", "vacio", "regular", "más o menos",
+# Palabras que indican que el pescador quiere un nuevo análisis (no feedback)
+_NEW_QUERY_KEYWORDS = [
+    "puedo pescar", "puedo salir", "como esta", "cómo está", "semaforo",
+    "condiciones", "clima", "como va", "cómo va", "hoy como", "hoy cómo",
 ]
 
 
@@ -42,6 +42,15 @@ def is_awaiting_feedback(phone: str) -> bool:
     return _conversations.get(phone, {}).get("awaiting_feedback", False)
 
 
-def looks_like_feedback(message: str) -> bool:
+def looks_like_new_query(message: str) -> bool:
+    """Detecta si el pescador quiere un análisis nuevo en lugar de dar feedback."""
     msg_lower = message.lower()
-    return any(kw in msg_lower for kw in FEEDBACK_KEYWORDS)
+    return any(kw in msg_lower for kw in _NEW_QUERY_KEYWORDS)
+
+
+def looks_like_feedback(message: str) -> bool:
+    """
+    Cuando el bot está esperando feedback, cualquier mensaje se trata como
+    reporte del pescador, a menos que sea claramente una consulta nueva.
+    """
+    return not looks_like_new_query(message)

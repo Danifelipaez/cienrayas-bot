@@ -44,10 +44,15 @@ async def generate_fishing_response(
 
 
 async def generate_feedback_ack(feedback_text: str) -> str:
-    prompt = (
-        f"Un pescador de la Ciénaga Grande respondió esto: \"{feedback_text}\"\n"
-        "Escríbele un agradecimiento muy corto (máx 2 líneas), en lenguaje sencillo "
-        "y caribeño, como si fueras un compañero pescador. "
-        "Menciona que su reporte ayuda a mejorar el sistema."
-    )
+    prompt = f"""Un pescador de la Ciénaga Grande te contó cómo le fue hoy en la faena:
+"{feedback_text}"
+
+Escríbele una respuesta corta (máx 3 líneas) siguiendo estas reglas:
+- Habla como un compañero pescador del Caribe, con confianza y calidez
+- Reacciona específicamente a lo que dijo: si le fue bien, celebra con él; si le fue mal, acompáñalo
+- Si menciona una zona, especie o condición del agua, comenta sobre eso
+- Agradécele el reporte porque ayuda a que las alertas sean más exactas para todos
+- Termina invitándolo a consultar mañana
+- Máximo 3 líneas, sin emojis excesivos (máx 1)
+- Cero palabras técnicas"""
     return await asyncio.to_thread(_call_groq, prompt)
