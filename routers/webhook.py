@@ -21,9 +21,11 @@ from config import WEBHOOK_VERIFY_TOKEN, BASE_URL
 from services.whatsapp import send
 from services.weather import get_weather
 from services.satellite import get_satellite_data
+from services.water_quality import get_water_quality
 from services.map_generator import generate_map
 from services.llm import generate_fishing_response, generate_feedback_ack
 from core.semaphore import evaluate
+from core.zone_analysis import recommend_zone
 from core.state import (
     record_query, record_feedback,
     is_awaiting_feedback, looks_like_feedback,
@@ -38,9 +40,10 @@ router = APIRouter()
 
 async def _handle_fishing_query(from_number: str, user_message: str):
     try:
-        weather, satellite = await asyncio.gather(
+        weather, satellite, water_quality = await asyncio.gather(
             get_weather(),
             get_satellite_data(),
+            get_water_quality(),
         )
     except Exception as e:
         logger.error(f"Error obteniendo datos para {from_number}: {e}")
@@ -49,7 +52,8 @@ async def _handle_fishing_query(from_number: str, user_message: str):
                    f"Intente en unos minutos. ({e.__class__.__name__})")
         return
 
-    result = evaluate(weather, satellite)
+    result = evaluate(weather, satellite, water_quality)
+    best_zone = recommend_zone(satellite, water_quality)
 
     # ROJO — alerta de seguridad, sin mapa
     if not result.safe:
@@ -69,7 +73,7 @@ async def _handle_fishing_query(from_number: str, user_message: str):
     # VERDE / AMARILLO — análisis completo
     try:
         response_text, map_filename = await asyncio.gather(
-            generate_fishing_response(weather, satellite, result.color),
+            generate_fishing_response(weather, satellite, water_quality, result.color),
             asyncio.to_thread(
                 generate_map, result.color,
                 satellite["sst"], satellite["chlorophyll"]
@@ -81,10 +85,12 @@ async def _handle_fishing_query(from_number: str, user_message: str):
                    f"Tuve un problema generando el análisis 😓 Error: {str(e)[:60]}")
         return
 
+    wq_src = water_quality.get("source", "IDEAM-CGSM")
     footer = (
         f"\n\n━━━━━━━━━━━━━\n"
         f"_{result.emoji} {result.reason}_\n"
-        f"_Fuentes: NASA · Open-Meteo · {satellite['sst_source']}_"
+        f"_📍 Mejor zona: {best_zone['name']} (índice {best_zone['score']:.0f}/100)_\n"
+        f"_Fuentes: NASA · Open-Meteo · {wq_src}_"
     )
 
     try:
