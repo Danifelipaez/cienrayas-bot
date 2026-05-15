@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from core.knowledge import local_wind_name, VIENTO_PELIGRO
 
 
 @dataclass
@@ -20,6 +21,7 @@ def evaluate(weather: dict, satellite: dict, water_quality: dict) -> SemaphoreRe
     wind_speed    = weather.get("wind_speed", 0) or 0
     wind_gusts    = weather.get("wind_gusts", 0) or 0
     precipitation = weather.get("precipitation", 0) or 0
+    wind_dir_code = weather.get("wind_direction_name", "E")
     sst           = satellite.get("sst") or 28.0
     chlorophyll   = satellite.get("chlorophyll") or 3.0
 
@@ -28,9 +30,15 @@ def evaluate(weather: dict, satellite: dict, water_quality: dict) -> SemaphoreRe
     salinity      = water_quality.get("salinity") or 10.0
     turbidity     = water_quality.get("turbidity") or 60.0
 
+    viento_local, viento_peligroso = local_wind_name(wind_dir_code)
+    viento_desc_local = VIENTO_PELIGRO.get(viento_local, viento_local)
+
     # --- ROJO: no salir ---
     if wind_speed > 30 or wind_gusts > 45:
-        return SemaphoreResult("rojo", "🔴", "Vientos muy fuertes — viento de loma bravo", False)
+        return SemaphoreResult("rojo", "🔴", f"Vientos muy fuertes — {viento_desc_local}", False)
+    # Norte o Burro con viento fuerte: frentes fríos, riesgo alto en la ciénaga
+    if viento_peligroso and wind_speed > 25:
+        return SemaphoreResult("rojo", "🔴", f"{viento_local} bravo — {viento_desc_local}", False)
     if precipitation > 10:
         return SemaphoreResult("rojo", "🔴", "Lluvia intensa — aguacero en la ciénaga", False)
     if wind_speed > 20 and precipitation > 5:
@@ -41,6 +49,9 @@ def evaluate(weather: dict, satellite: dict, water_quality: dict) -> SemaphoreRe
 
     # --- AMARILLO: salir con cuidado ---
     yellow_reasons = []
+    # Viento peligroso local aunque no supere el umbral de km/h
+    if viento_peligroso and wind_speed > 15:
+        yellow_reasons.append(f"{viento_local} (viento malo) — {viento_desc_local}")
     if wind_speed > 20:
         yellow_reasons.append("viento moderado (más de 20 km/h)")
     if precipitation > 3:
@@ -72,17 +83,22 @@ def evaluate(weather: dict, satellite: dict, water_quality: dict) -> SemaphoreRe
         )
 
     # --- VERDE: buen día ---
+    from core.knowledge import get_lunar_phase
+    lunar = get_lunar_phase()
+
     bonuses = []
     if chlorophyll > 5:
         bonuses.append("hay buena mancha de peces")
     if 26 <= sst <= 30:
         bonuses.append("temperatura del agua ideal")
     if wind_speed < 10:
-        bonuses.append("mar tranquilo")
+        bonuses.append(f"mar tranquilo — {viento_local.lower()}")
     if od >= 6.0:
         bonuses.append("agua bien oxigenada")
     if salinity < 10 and water_quality.get("season") == "lluvias":
         bonuses.append("agua dulce — buena para lisa y mojarra")
+    if lunar["shrimp_active"]:
+        bonuses.append(f"{lunar['phase']} {lunar['emoji']} — {lunar['shrimp_note']}")
 
     reason = "Condiciones favorables"
     if bonuses:
