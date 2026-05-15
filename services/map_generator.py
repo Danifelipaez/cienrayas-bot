@@ -140,16 +140,16 @@ _FISHING_POINT_COORDS: dict[str, tuple[float, float]] = {
 }
 
 # ---------------------------------------------------------------------------
-# Paleta cartográfica — estilo Natural Earth / QGIS
+# Paleta — estilo carta náutica oscura (original CienRayas)
 # ---------------------------------------------------------------------------
-_BG        = "#f2ede3"   # crema natural — fondo exterior
-_PANEL_BG  = "#1a2535"   # panel de datos oscuro
-_OCEAN     = "#c6dff0"   # Mar Caribe azul suave
-_WATER     = "#5fa8cc"   # agua de la ciénaga (azul-teal)
-_LAND      = "#ddd5be"   # tierra — tono arena natural
-_LAND_EDGE = "#b0a080"   # borde de la tierra
-_RIVER     = "#4a9dc8"   # ríos y caños
-_GRID      = "#b0b0b0"   # grilla suave
+_BG        = "#0b1826"   # fondo general (azul noche)
+_PANEL_BG  = "#0d1b2a"   # panel de datos
+_OCEAN     = "#12304d"   # Mar Caribe
+_WATER     = "#1a5c8a"   # agua de la ciénaga
+_LAND      = "#2d3d22"   # tierra
+_LAND_EDGE = "#1e2c18"   # borde tierra
+_RIVER     = "#1a7ab5"   # ríos y caños
+_GRID      = "#ffffff"   # grilla
 
 _SEMAPHORE_COLORS = {
     "verde":    "#2ecc71",
@@ -178,25 +178,25 @@ def _north_arrow(ax, x=0.955, y=0.935):
     ax.annotate(
         "N", xy=(x, y + 0.048), xycoords="axes fraction",
         ha="center", va="center", fontsize=9, fontweight="bold",
-        color="#333333",
+        color="white",
         path_effects=[pe.withStroke(linewidth=2, foreground=_BG)],
     )
     ax.annotate(
         "", xy=(x, y + 0.042), xytext=(x, y),
         xycoords="axes fraction", textcoords="axes fraction",
-        arrowprops=dict(arrowstyle="-|>", color="#333333", lw=1.8),
+        arrowprops=dict(arrowstyle="-|>", color="white", lw=1.8),
     )
 
 
 def _scale_bar(ax, lon_left=-74.88, lat_bot=10.44, length_deg=0.18):
     ax.plot([lon_left, lon_left + length_deg], [lat_bot, lat_bot],
-            color="#333333", lw=2.5, solid_capstyle="butt", zorder=20)
+            color="white", lw=2.5, solid_capstyle="butt", zorder=20)
     ax.plot([lon_left, lon_left],
-            [lat_bot - 0.008, lat_bot + 0.008], color="#333333", lw=1.5, zorder=20)
+            [lat_bot - 0.008, lat_bot + 0.008], color="white", lw=1.5, zorder=20)
     ax.plot([lon_left + length_deg, lon_left + length_deg],
-            [lat_bot - 0.008, lat_bot + 0.008], color="#333333", lw=1.5, zorder=20)
+            [lat_bot - 0.008, lat_bot + 0.008], color="white", lw=1.5, zorder=20)
     ax.text(lon_left + length_deg / 2, lat_bot - 0.020, "≈ 15 km",
-            ha="center", va="top", color="#333333", fontsize=7,
+            ha="center", va="top", color="white", fontsize=7,
             path_effects=[pe.withStroke(linewidth=1.5, foreground=_BG)], zorder=20)
 
 
@@ -232,10 +232,9 @@ def generate_map(
     )
     ax.add_patch(mar)
     ax.text(-74.50, 11.12, "MAR CARIBE",
-            ha="center", va="center", color="#2a7ab8",
-            fontsize=8, fontstyle="italic", fontweight="bold",
-            alpha=0.85, zorder=2,
-            path_effects=[pe.withStroke(linewidth=1, foreground=_OCEAN)])
+            ha="center", va="center", color="#5dade2",
+            fontsize=8.5, fontstyle="italic", fontweight="bold",
+            alpha=0.85, zorder=2)
 
     # --- Ríos y caños ---
     for river in [_CANO_CLARIN, _RIO_FUNDACION, _RIO_ARACATACA, _RIO_SEVILLA]:
@@ -260,8 +259,8 @@ def generate_map(
     ax.add_patch(cienaga_shadow)
 
     ax.text(-74.50, 10.84, "CIÉNAGA GRANDE\nDE SANTA MARTA",
-            ha="center", va="center", color="#1a5a80",
-            fontsize=7.5, fontstyle="italic", alpha=0.40, zorder=5)
+            ha="center", va="center", color="white",
+            fontsize=7.5, fontstyle="italic", alpha=0.35, zorder=5)
 
     # --- Todos los puntos de pesca locales (capa base) ---
     for pt_name, (lon, lat) in _FISHING_POINT_COORDS.items():
@@ -299,12 +298,12 @@ def generate_map(
             ax.annotate(
                 full_label, (lon, lat),
                 xytext=offset, textcoords="offset points",
-                color="#1a1a1a", fontsize=6.5,
+                color="white", fontsize=6.5,
                 fontweight="bold" if is_best else "normal",
                 zorder=12,
                 bbox=dict(boxstyle="round,pad=0.25",
-                          facecolor="white", edgecolor=color,
-                          linewidth=1.0, alpha=0.88),
+                          facecolor=_BG, edgecolor=color,
+                          linewidth=0.9, alpha=0.85),
             )
 
         # --- Puntos de Adelmo: resaltar los de las mejores zonas ---
@@ -328,10 +327,10 @@ def generate_map(
                         ax.annotate(
                             pt_name, (lon, lat),
                             xytext=(6, 4), textcoords="offset points",
-                            color="#7a5500", fontsize=5.8, fontweight="bold",
+                            color="gold", fontsize=5.8, fontweight="bold",
                             zorder=16,
-                            path_effects=[pe.withStroke(linewidth=2.2,
-                                                         foreground="white")],
+                            path_effects=[pe.withStroke(linewidth=2.0,
+                                                         foreground=_BG)],
                         )
                 elif rank_idx == 1:
                     ax.scatter(lon, lat, s=28, marker="o", color=pt_color,
@@ -352,14 +351,13 @@ def generate_map(
 
     # --- Comunidades pesqueras ---
     for lon, lat, nombre, sector in _COMMUNITIES:
-        marker_color = "#444444"
-        ax.scatter(lon, lat, s=32, color=marker_color, zorder=8,
-                   marker="s", edgecolors="white", linewidths=0.8)
+        ax.scatter(lon, lat, s=28, color="white", zorder=8,
+                   marker="o", edgecolors="#aaaaaa", linewidths=0.6)
         ax.annotate(nombre, (lon, lat),
                     xytext=(5, 4), textcoords="offset points",
-                    color="#222222", fontsize=6.0, zorder=9,
-                    path_effects=[pe.withStroke(linewidth=2.0,
-                                                 foreground="white")])
+                    color="#dddddd", fontsize=6.0, zorder=9,
+                    path_effects=[pe.withStroke(linewidth=1.8,
+                                                 foreground=_BG)])
 
     # --- Leyenda ---
     legend_items = [
@@ -374,18 +372,18 @@ def generate_map(
     ]
     leg = ax.legend(
         handles=legend_items, loc="upper left",
-        facecolor="white", edgecolor="#aaaaaa",
-        labelcolor="#222222", fontsize=7.0,
-        framealpha=0.90, borderpad=0.7,
+        facecolor=_BG, edgecolor="#5dade2",
+        labelcolor="white", fontsize=7.0,
+        framealpha=0.88, borderpad=0.7,
     )
 
     # --- Grilla, escala y norte ---
     ax.xaxis.set_major_locator(MultipleLocator(0.2))
     ax.yaxis.set_major_locator(MultipleLocator(0.1))
-    ax.grid(True, color=_GRID, alpha=0.45, linestyle=":", linewidth=0.5)
+    ax.grid(True, color=_GRID, alpha=0.06, linestyle="--", linewidth=0.5)
     ax.tick_params(colors="#666666", labelsize=6.2, length=3)
     for spine in ax.spines.values():
-        spine.set_edgecolor("#888888")
+        spine.set_edgecolor("#334455")
         spine.set_linewidth(0.8)
 
     _north_arrow(ax)
@@ -394,8 +392,9 @@ def generate_map(
     today = datetime.now().strftime("%d %b %Y  %H:%M")
     ax.set_title(
         f"CienRayas  ·  Ciénaga Grande de Santa Marta\n{today}",
-        color="#1a1a1a", fontsize=10.5, fontweight="bold",
+        color="white", fontsize=10.5, fontweight="bold",
         pad=9, loc="center",
+        path_effects=[pe.withStroke(linewidth=2, foreground=_BG)],
     )
 
     # -----------------------------------------------------------------------
@@ -429,23 +428,30 @@ def generate_map(
         transform=ax_panel.transAxes, zorder=2,
     ))
     ax_panel.text(0.165, 0.90, "SEMÁFORO DEL DÍA",
-                  transform=ax_panel.transAxes,
-                  ha="center", va="top", color="#aaaaaa", fontsize=8.0,
+                  transform=ax_panel.transAxes, zorder=5,
+                  ha="center", va="top", color="#d0dce8", fontsize=8.2,
                   fontweight="bold")
     # Círculo de color del semáforo
-    circle = plt.Circle((0.165, 0.60), 0.07,
+    circle = plt.Circle((0.165, 0.58), 0.075,
                          color=sem_color, zorder=3,
                          transform=ax_panel.transAxes)
     ax_panel.add_patch(circle)
-    ax_panel.text(0.165, 0.60, semaphore_color[0].upper(),
-                  transform=ax_panel.transAxes,
+    ax_panel.text(0.165, 0.58, semaphore_color[0].upper(),
+                  transform=ax_panel.transAxes, zorder=6,
                   ha="center", va="center",
-                  color="white", fontsize=14, fontweight="bold", zorder=4)
-    ax_panel.text(0.165, 0.28,
-                  _SEMAPHORE_LABELS.get(semaphore_color, ""),
-                  transform=ax_panel.transAxes,
-                  ha="center", va="center", color="white",
-                  fontsize=9.0, fontweight="bold")
+                  color="white", fontsize=16, fontweight="bold")
+    label_sem = _SEMAPHORE_LABELS.get(semaphore_color, "")
+    # Partir el label en dos líneas si es largo
+    partes = label_sem.split(" — ", 1)
+    ax_panel.text(0.165, 0.30, partes[0],
+                  transform=ax_panel.transAxes, zorder=5,
+                  ha="center", va="center",
+                  color=sem_color, fontsize=9.5, fontweight="bold")
+    if len(partes) > 1:
+        ax_panel.text(0.165, 0.16, partes[1],
+                      transform=ax_panel.transAxes, zorder=5,
+                      ha="center", va="center",
+                      color="#e8e8e8", fontsize=8.5)
 
     # --- Columna central: Condiciones del agua ---
     wq = water_quality or {}
@@ -455,9 +461,9 @@ def generate_map(
               "transicion": "Transición"}.get(wq.get("season", ""), "–")
 
     ax_panel.text(0.495, 0.90, "CONDICIONES DEL AGUA",
-                  transform=ax_panel.transAxes,
-                  ha="center", va="top", color="#aaaaaa",
-                  fontsize=8.0, fontweight="bold")
+                  transform=ax_panel.transAxes, zorder=5,
+                  ha="center", va="top", color="#d0dce8",
+                  fontsize=8.2, fontweight="bold")
 
     data_lines = [
         ("Temp. agua:", f"{sst} °C"),
@@ -468,52 +474,53 @@ def generate_map(
     ]
     for j, (label, value) in enumerate(data_lines):
         y = 0.76 - j * 0.145
-        ax_panel.text(0.355, y, label,
-                      transform=ax_panel.transAxes,
+        ax_panel.text(0.350, y, label,
+                      transform=ax_panel.transAxes, zorder=5,
                       ha="left", va="center",
-                      color="#aaaaaa", fontsize=8.5)
-        ax_panel.text(0.630, y, value,
-                      transform=ax_panel.transAxes,
+                      color="#8aaabb", fontsize=8.5)
+        ax_panel.text(0.635, y, value,
+                      transform=ax_panel.transAxes, zorder=5,
                       ha="right", va="center",
-                      color="white", fontsize=8.5, fontweight="bold")
+                      color="#ffffff", fontsize=8.8, fontweight="bold")
 
     # --- Columna derecha: Top zonas con puntos locales ---
     ax_panel.text(0.830, 0.90, "TOP ZONAS HOY",
-                  transform=ax_panel.transAxes,
-                  ha="center", va="top", color="#aaaaaa",
-                  fontsize=8.0, fontweight="bold")
+                  transform=ax_panel.transAxes, zorder=5,
+                  ha="center", va="top", color="#d0dce8",
+                  fontsize=8.2, fontweight="bold")
 
     if zone_ranking:
         medals_panel = ["★", "②", "③"]
-        cols_rank    = ["gold", "white", "#aaaaaa"]
+        cols_puntos  = ["gold",     "#e8e8e8", "#b8c8d8"]
+        cols_detalle = ["#c8a800",  "#8aaabb", "#607080"]
         for j, z in enumerate(zone_ranking[:3]):
             y = 0.74 - j * 0.22
-            puntos = " · ".join(z.get("local_points", [])[:2])
+            puntos  = " · ".join(z.get("local_points", [])[:2])
             especie = z["species"][0] if z["species"] else ""
             score   = z.get("score", 0)
 
             ax_panel.text(0.675, y, medals_panel[j],
-                          transform=ax_panel.transAxes,
+                          transform=ax_panel.transAxes, zorder=5,
                           ha="left", va="center",
-                          color=cols_rank[j], fontsize=10,
+                          color=cols_puntos[j], fontsize=11,
                           fontweight="bold")
-            ax_panel.text(0.710, y + 0.055, puntos,
-                          transform=ax_panel.transAxes,
+            ax_panel.text(0.710, y + 0.06, puntos,
+                          transform=ax_panel.transAxes, zorder=5,
                           ha="left", va="center",
-                          color=cols_rank[j], fontsize=8.2,
+                          color=cols_puntos[j], fontsize=8.5,
                           fontweight="bold" if j == 0 else "normal")
-            ax_panel.text(0.710, y - 0.045, f"{especie}  ({score:.0f}/100)",
-                          transform=ax_panel.transAxes,
+            ax_panel.text(0.710, y - 0.05, f"{especie}  ({score:.0f}/100)",
+                          transform=ax_panel.transAxes, zorder=5,
                           ha="left", va="center",
-                          color="#888888", fontsize=7.5)
+                          color=cols_detalle[j], fontsize=7.8)
 
     # Créditos
     ax_panel.plot([0.02, 0.98], [0.055, 0.055], color="#2a4a6a",
                   linewidth=0.6, transform=ax_panel.transAxes, alpha=0.5)
     ax_panel.text(0.50, 0.025,
                   "NASA · IDEAM · Open-Meteo · INVEMAR  |  Universidad del Magdalena",
-                  transform=ax_panel.transAxes,
-                  ha="center", va="center", color="#445566", fontsize=7.0)
+                  transform=ax_panel.transAxes, zorder=5,
+                  ha="center", va="center", color="#6080a0", fontsize=7.2)
 
     # -----------------------------------------------------------------------
     filename = f"mapa_{uuid.uuid4().hex[:8]}.png"
