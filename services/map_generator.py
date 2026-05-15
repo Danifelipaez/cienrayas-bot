@@ -209,10 +209,10 @@ def generate_map(
 ) -> str:
     sem_color = _SEMAPHORE_COLORS.get(semaphore_color, _SEMAPHORE_COLORS["verde"])
 
-    fig = plt.figure(figsize=(8, 9.8), facecolor=_BG)
+    fig = plt.figure(figsize=(8, 10.2), facecolor=_BG)
 
-    # Mapa principal
-    ax = fig.add_axes([0.05, 0.225, 0.90, 0.730])
+    # Mapa principal — el panel ocupa 30% abajo
+    ax = fig.add_axes([0.05, 0.32, 0.90, 0.655])
     ax.set_facecolor(_OCEAN)
     ax.set_xlim(-74.92, -74.08)
     ax.set_ylim(10.40, 11.18)
@@ -399,79 +399,121 @@ def generate_map(
     )
 
     # -----------------------------------------------------------------------
-    # Panel de datos (abajo)
+    # Panel de datos (abajo) — 30% del alto de la figura
     # -----------------------------------------------------------------------
-    ax_panel = fig.add_axes([0.0, 0.0, 1.0, 0.215])
+    ax_panel = fig.add_axes([0.0, 0.0, 1.0, 0.30])
     ax_panel.set_facecolor(_PANEL_BG)
     ax_panel.axis("off")
 
-    # Borde superior del panel
-    ax_panel.plot([0, 1], [0.98, 0.98], color="#3a5a80", linewidth=1.2,
-                  transform=ax_panel.transAxes)
+    # Línea divisoria superior
+    ax_panel.plot([0.02, 0.98], [0.965, 0.965], color="#3a5a80",
+                  linewidth=1.5, transform=ax_panel.transAxes)
 
-    # Semáforo
+    # Líneas divisorias verticales entre columnas
+    ax_panel.plot([0.33, 0.33], [0.06, 0.96], color="#2a4a6a",
+                  linewidth=0.8, transform=ax_panel.transAxes, alpha=0.6)
+    ax_panel.plot([0.66, 0.66], [0.06, 0.96], color="#2a4a6a",
+                  linewidth=0.8, transform=ax_panel.transAxes, alpha=0.6)
+
+    # --- Columna izquierda: Semáforo ---
     ax_panel.add_patch(mpatches.FancyBboxPatch(
-        (0.02, 0.10), 0.27, 0.82,
-        boxstyle="round,pad=0.02", facecolor=sem_color, alpha=0.22,
+        (0.025, 0.08), 0.28, 0.84,
+        boxstyle="round,pad=0.015",
+        facecolor=sem_color, alpha=0.18,
         transform=ax_panel.transAxes, zorder=1,
     ))
     ax_panel.add_patch(mpatches.FancyBboxPatch(
-        (0.02, 0.10), 0.27, 0.82,
-        boxstyle="round,pad=0.02", facecolor="none",
-        edgecolor=sem_color, linewidth=1.2,
+        (0.025, 0.08), 0.28, 0.84,
+        boxstyle="round,pad=0.015",
+        facecolor="none", edgecolor=sem_color, linewidth=1.4,
         transform=ax_panel.transAxes, zorder=2,
     ))
-    ax_panel.text(0.155, 0.83, "SEMÁFORO DEL DÍA",
+    ax_panel.text(0.165, 0.90, "SEMÁFORO DEL DÍA",
                   transform=ax_panel.transAxes,
-                  ha="center", va="top", color="#aaaaaa", fontsize=6.8)
-    ax_panel.text(0.155, 0.52,
+                  ha="center", va="top", color="#aaaaaa", fontsize=8.0,
+                  fontweight="bold")
+    # Círculo de color del semáforo
+    circle = plt.Circle((0.165, 0.60), 0.07,
+                         color=sem_color, zorder=3,
+                         transform=ax_panel.transAxes)
+    ax_panel.add_patch(circle)
+    ax_panel.text(0.165, 0.60, semaphore_color[0].upper(),
+                  transform=ax_panel.transAxes,
+                  ha="center", va="center",
+                  color="white", fontsize=14, fontweight="bold", zorder=4)
+    ax_panel.text(0.165, 0.28,
                   _SEMAPHORE_LABELS.get(semaphore_color, ""),
                   transform=ax_panel.transAxes,
                   ha="center", va="center", color="white",
-                  fontsize=8.2, fontweight="bold")
+                  fontsize=9.0, fontweight="bold")
 
-    # Datos del agua
+    # --- Columna central: Condiciones del agua ---
     wq = water_quality or {}
     od     = wq.get("dissolved_oxygen", "–")
     sal    = wq.get("salinity", "–")
     season = {"seca": "Época seca", "lluvias": "Lluvias",
-              "transicion": "Transición"}.get(wq.get("season", ""), "")
+              "transicion": "Transición"}.get(wq.get("season", ""), "–")
 
-    ax_panel.text(0.50, 0.88, "CONDICIONES DEL AGUA",
+    ax_panel.text(0.495, 0.90, "CONDICIONES DEL AGUA",
                   transform=ax_panel.transAxes,
-                  ha="center", va="top", color="#aaaaaa", fontsize=6.8)
-    for j, line in enumerate([
-        f"Temp. agua: {sst} °C       Clorofila: {chlorophyll} mg/m³",
-        f"Oxígeno: {od} mg/L       Salinidad: {sal} PSU",
-        season,
-    ]):
-        ax_panel.text(0.50, 0.66 - j * 0.20, line,
-                      transform=ax_panel.transAxes,
-                      ha="center", va="center", color="white", fontsize=7.8)
+                  ha="center", va="top", color="#aaaaaa",
+                  fontsize=8.0, fontweight="bold")
 
-    # Ranking top 3 con puntos locales
+    data_lines = [
+        ("Temp. agua:", f"{sst} °C"),
+        ("Clorofila:",  f"{chlorophyll} mg/m³"),
+        ("Oxígeno:",    f"{od} mg/L"),
+        ("Salinidad:",  f"{sal} PSU"),
+        ("Temporada:",  season),
+    ]
+    for j, (label, value) in enumerate(data_lines):
+        y = 0.76 - j * 0.145
+        ax_panel.text(0.355, y, label,
+                      transform=ax_panel.transAxes,
+                      ha="left", va="center",
+                      color="#aaaaaa", fontsize=8.5)
+        ax_panel.text(0.630, y, value,
+                      transform=ax_panel.transAxes,
+                      ha="right", va="center",
+                      color="white", fontsize=8.5, fontweight="bold")
+
+    # --- Columna derecha: Top zonas con puntos locales ---
+    ax_panel.text(0.830, 0.90, "TOP ZONAS HOY",
+                  transform=ax_panel.transAxes,
+                  ha="center", va="top", color="#aaaaaa",
+                  fontsize=8.0, fontweight="bold")
+
     if zone_ranking:
-        ax_panel.text(0.845, 0.88, "TOP ZONAS HOY",
-                      transform=ax_panel.transAxes,
-                      ha="center", va="top", color="#aaaaaa", fontsize=6.8)
+        medals_panel = ["★", "②", "③"]
+        cols_rank    = ["gold", "white", "#aaaaaa"]
         for j, z in enumerate(zone_ranking[:3]):
-            medals_panel = ["★ ", "② ", "③ "][j]
-            col = ["gold", "white", "#aaaaaa"][j]
+            y = 0.74 - j * 0.22
             puntos = " · ".join(z.get("local_points", [])[:2])
-            ax_panel.text(
-                0.695, 0.65 - j * 0.20,
-                f"{medals_panel}{puntos}",
-                transform=ax_panel.transAxes,
-                ha="left", va="center", color=col,
-                fontsize=7.2, fontweight="bold" if j == 0 else "normal",
-            )
+            especie = z["species"][0] if z["species"] else ""
+            score   = z.get("score", 0)
 
-    ax_panel.text(
-        0.50, 0.04,
-        "NASA · IDEAM · Open-Meteo · INVEMAR  |  Universidad del Magdalena",
-        transform=ax_panel.transAxes,
-        ha="center", va="bottom", color="#445566", fontsize=6.2,
-    )
+            ax_panel.text(0.675, y, medals_panel[j],
+                          transform=ax_panel.transAxes,
+                          ha="left", va="center",
+                          color=cols_rank[j], fontsize=10,
+                          fontweight="bold")
+            ax_panel.text(0.710, y + 0.055, puntos,
+                          transform=ax_panel.transAxes,
+                          ha="left", va="center",
+                          color=cols_rank[j], fontsize=8.2,
+                          fontweight="bold" if j == 0 else "normal")
+            ax_panel.text(0.710, y - 0.045, f"{especie}  ({score:.0f}/100)",
+                          transform=ax_panel.transAxes,
+                          ha="left", va="center",
+                          color="#888888", fontsize=7.5)
+
+    # Créditos
+    ax_panel.plot([0.02, 0.98], [0.055, 0.055], color="#2a4a6a",
+                  linewidth=0.6, transform=ax_panel.transAxes, alpha=0.5)
+    ax_panel.text(0.50, 0.025,
+                  "NASA · IDEAM · Open-Meteo · INVEMAR  |  Universidad del Magdalena",
+                  transform=ax_panel.transAxes,
+                  ha="center", va="center", color="#445566", fontsize=7.0)
 
     # -----------------------------------------------------------------------
     filename = f"mapa_{uuid.uuid4().hex[:8]}.png"
