@@ -27,10 +27,12 @@ from dataclasses import dataclass
 @dataclass
 class Zone:
     name: str
-    sal_min: float      # salinidad típica mínima (PSU)
-    sal_max: float      # salinidad típica máxima (PSU)
-    species: list[str]  # especies dominantes
-    arts: list[str]     # artes de pesca recomendadas
+    sal_min: float        # salinidad típica mínima (PSU)
+    sal_max: float        # salinidad típica máxima (PSU)
+    species: list[str]    # especies dominantes
+    arts: list[str]       # artes de pesca recomendadas
+    local_points: list[str]  # puntos de pesca locales (saber de Adelmo)
+    camaron_zone: bool = False  # zona buena para camarón con luna
 
 
 ZONES: list[Zone] = [
@@ -39,36 +41,44 @@ ZONES: list[Zone] = [
         sal_min=20, sal_max=36,
         species=["macabí", "sábalo", "mapalé"],
         arts=["palangre", "trasmallo"],
+        local_points=["Boquerón", "Barra Vieja", "Punta Blanca", "Punta Gruesa"],
     ),
     Zone(
         name="Nueva Venecia – Palafíticos Norte",
         sal_min=8, sal_max=22,
         species=["lisa", "mojarra rayada", "chivo cabezón"],
         arts=["atarraya lisera", "boliche", "trasmallo"],
+        local_points=["Palancar", "Los Micos", "Los Medios", "Boca del Pájaro", "El Rincón de las Garzas"],
     ),
     Zone(
         name="Buenavista – Palafíticos Sur",
         sal_min=5, sal_max=18,
         species=["lisa", "mojarra lora", "jaiba azul"],
         arts=["atarraya", "nasa", "trasmallo"],
+        local_points=["Las Mujeres", "La Bodega", "Rincón de Veranillo", "Caño Grande", "Palo Blanco"],
     ),
     Zone(
         name="Caño Clarín – Sector Carretera Norte",
         sal_min=2, sal_max=12,
         species=["mojarra rayada", "mapalé", "camarón"],
         arts=["atarraya camaronera", "releo", "palangre"],
+        local_points=["Pancú", "Riají", "Palenque", "Boca del Caño", "Punta del Caño"],
+        camaron_zone=True,
     ),
     Zone(
         name="Tasajera / Puebloviejo – Sector Carretera Sur",
         sal_min=3, sal_max=15,
         species=["lisa", "mojarra", "almeja"],
         arts=["atarraya", "buceo", "trasmallo"],
+        local_points=["Tasajera", "Majahualito", "La Punta de Majahualito", "Flamenquito", "Santa Rosa"],
+        camaron_zone=True,
     ),
     Zone(
         name="Suroccidente – Pivijay / Santa Rita",
         sal_min=0, sal_max=8,
         species=["mojarra lora", "mapalé", "chivo cabezón"],
         arts=["atarraya", "palangre", "nasa"],
+        local_points=["El Torno", "Caimán", "Corralito", "Mahoma", "Jaguey"],
     ),
 ]
 
@@ -182,20 +192,8 @@ def _zone_ipp(zone: Zone, satellite: dict, wq: dict) -> float:
 
 
 def recommend_zone(satellite: dict, wq: dict) -> dict:
-    """
-    Devuelve la zona con el IPP más alto y el detalle de puntaje.
-    """
-    results = []
-    for zone in ZONES:
-        score = _zone_ipp(zone, satellite, wq)
-        results.append({
-            "name":    zone.name,
-            "score":   score,
-            "species": zone.species,
-            "arts":    zone.arts,
-        })
-
-    results.sort(key=lambda z: z["score"], reverse=True)
+    """Devuelve la zona con el IPP más alto."""
+    results = full_ranking(satellite, wq)
     return results[0]
 
 
@@ -205,9 +203,11 @@ def full_ranking(satellite: dict, wq: dict) -> list[dict]:
     for zone in ZONES:
         score = _zone_ipp(zone, satellite, wq)
         results.append({
-            "name":    zone.name,
-            "score":   score,
-            "species": zone.species,
-            "arts":    zone.arts,
+            "name":         zone.name,
+            "score":        score,
+            "species":      zone.species,
+            "arts":         zone.arts,
+            "local_points": zone.local_points,
+            "camaron_zone": zone.camaron_zone,
         })
     return sorted(results, key=lambda z: z["score"], reverse=True)

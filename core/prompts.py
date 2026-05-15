@@ -87,11 +87,13 @@ def _zone_ranking_text(satellite: dict, wq: dict) -> str:
     ranking = full_ranking(satellite, wq)
     lines = ["ZONAS ORDENADAS DE MEJOR A PEOR HOY:"]
     labels = ["Mejor zona", "Segunda zona", "Tercera zona"]
-    for i, z in enumerate(ranking):
-        label = labels[i] if i < 3 else f"Zona {i+1}"
+    for i, z in enumerate(ranking[:3]):
+        label = labels[i]
         sp = " y ".join(z["species"][:2])
         arte = z["arts"][0] if z["arts"] else ""
-        lines.append(f"  {label}: {z['name']} — hay {sp} — usar {arte}")
+        puntos = ", ".join(z["local_points"][:3])
+        camaron_flag = " [ZONA DE CAMARÓN]" if z.get("camaron_zone") else ""
+        lines.append(f"  {label}: puntos {puntos}{camaron_flag} — hay {sp} — usar {arte}")
     return "\n".join(lines)
 
 
@@ -164,6 +166,17 @@ def build_fishing_prompt(weather: dict, satellite: dict, water_quality: dict, se
         else ""
     )
 
+    # Camarón + luna: punto específico de la mejor zona camaronera
+    best_camaron_zone = next(
+        (z for z in full_ranking(satellite, water_quality) if z.get("camaron_zone")), None
+    )
+    camaron_punto = best_camaron_zone["local_points"][0] if best_camaron_zone else "Pancú"
+    luna_camaron_linea = (
+        f"- Camarón con luna: {lunar['phase']} {lunar['emoji']} — {lunar['shrimp_note']} — buscar en {camaron_punto}"
+        if lunar["shrimp_active"] else
+        f"- Camarón con luna: {lunar['phase']} {lunar['emoji']} — {lunar['shrimp_note']}"
+    )
+
     return f"""
 Informacion de la Cienaga Grande de Santa Marta para hoy:
 
@@ -174,7 +187,7 @@ CLIMA:
 - Temperatura del agua: {temp_desc}
 - Peces en el agua: {mancha_desc}
 - Color del agua: {color_agua}
-{luna_linea}
+{luna_camaron_linea}
 {clima_alerta}
 
 COMO ESTA EL AGUA HOY:
@@ -186,17 +199,24 @@ SEMAFORO DEL DIA: {semaphore_color.upper()}
 
 {get_fishing_context()}
 
-Ahora escribe el mensaje de WhatsApp para el pescador. Sigue estas reglas:
-1. Empieza directo: "Compa, hoy el semaforo esta en [color] ..."
-2. Di si conviene salir o no, en dos palabras
-3. Menciona el viento por su nombre local (Norte, Leste, Vendaval, Terral, Burro, Cañero)
-4. Si el agua esta verde, avisalo; si esta blanca, avisalo
-5. Di cual es la mejor zona para ir hoy y que especie buscar ahi
-6. Di con que arte de pesca conviene salir
-7. Si hay luna activa y hay camaron en temporada, menciona la luna con las palabras del pescador
-8. Si el agua esta pesada (oxigeno bajo), avisale con palabras sencillas
-9. Maximo 180 palabras — WhatsApp es para mensajes cortos
-10. Cero palabras tecnicas: nada de mg/L, PSU, NTU, IPP, clorofila, oxigeno disuelto
-11. Emojis con moderacion: maximo 4 en todo el mensaje (usa 🎣 🌊 💨 ⚠️ segun el caso)
+Ahora escribe el mensaje de WhatsApp para el pescador. REGLAS ESTRICTAS:
+
+REGLA 1 — EL SEMAFORO ES LA DECISION FINAL (no la contradigas nunca):
+- VERDE → "si conviene salir" — aunque el viento tenga nombre malo, el semaforo manda
+- AMARILLO → "salir con cuidado" — explica el riesgo pero no digas que no salga
+- ROJO → "no salir hoy" — aqui si debes decirlo claro
+
+REGLA 2 — ZONAS: usa los nombres de los puntos locales, no los nombres tecnicos de sector.
+- Bien: "anda a Palancar o Los Micos"
+- Mal: "la zona de Nueva Venecia"
+
+REGLA 3 — CAMARON Y LUNA: si hay luna activa, liga la luna al punto especifico.
+- Bien: "hay luna nueva — puede haber camaron en Pancu esta noche"
+- Mal: "hay luna nueva, es buena para la camaronera" (sin mencionar el punto)
+
+REGLA 4 — VIENTO: menciona el viento por su nombre local.
+REGLA 5 — Si el agua esta verde, avisalo. Si esta blanca o lechosa, avisalo.
+REGLA 6 — Maximo 180 palabras. Cero palabras tecnicas (mg/L, PSU, NTU, IPP, clorofila).
+REGLA 7 — Emojis: maximo 4 (usa 🎣 🌊 💨 ⚠️ segun el caso).
 NO incluyas la pregunta de feedback — esa se agrega sola al final.
 """
