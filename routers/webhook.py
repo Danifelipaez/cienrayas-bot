@@ -17,19 +17,15 @@ from fastapi.responses import PlainTextResponse
 
 logger = logging.getLogger(__name__)
 
-from pathlib import Path
-from datetime import datetime
-
-from config import WEBHOOK_VERIFY_TOKEN, BASE_URL, MEDIA_DIR
+from config import WEBHOOK_VERIFY_TOKEN, BASE_URL
 from services.whatsapp import send
 from services.weather import get_weather
 from services.satellite import get_satellite_data
 from services.water_quality import get_water_quality
-from services.map_generator import generar_mapa, _ZONE_COORDS
+from services.map_generator import generate_map
 from services.llm import generate_fishing_response, generate_feedback_ack
 from core.semaphore import evaluate
 from core.zone_analysis import recommend_zone, full_ranking
-from core.knowledge import get_lunar_phase, local_wind_name
 from core.state import (
     record_query, record_feedback,
     is_awaiting_feedback, looks_like_feedback,
@@ -37,53 +33,6 @@ from core.state import (
 )
 
 router = APIRouter()
-
-
-# ---------------------------------------------------------------------------
-# Helpers para construir los argumentos de generar_mapa
-# ---------------------------------------------------------------------------
-
-def _ipp_semaforo(score: float) -> str:
-    if score >= 60:
-        return "verde"
-    if score >= 35:
-        return "amarillo"
-    return "rojo"
-
-
-def _build_zonas(ranking: list) -> list:
-    zonas = []
-    for z in ranking:
-        coords = _ZONE_COORDS.get(z["name"])
-        if not coords:
-            continue
-        lon, lat, _ = coords
-        # Nombre corto: primera parte antes de " – " o " /"
-        nombre = z["name"].split(" – ")[0].split(" /")[0].strip()
-        zonas.append({
-            "nombre":   nombre,
-            "lat":      lat,
-            "lon":      lon,
-            "semaforo": _ipp_semaforo(z["score"]),
-            "ipp":      z["score"],
-        })
-    return zonas
-
-
-def _build_condiciones(weather: dict, satellite: dict, water_quality: dict | None) -> dict:
-    wq = water_quality or {}
-    lunar = get_lunar_phase()
-    wind_dir = weather.get("wind_direction_name", "N")
-    viento_local, _ = local_wind_name(wind_dir)
-    return {
-        "sst":           satellite.get("sst", "–"),
-        "chl":           round(satellite.get("chlorophyll", 0), 2),
-        "viento_vel":    weather.get("wind_speed", "–"),
-        "viento_nombre": viento_local,
-        "salinidad":     wq.get("salinity", "–"),
-        "od":            wq.get("dissolved_oxygen", "–"),
-        "luna":          f"{lunar['emoji']} {lunar['phase']}",
-    }
 
 
 # ---------------------------------------------------------------------------
@@ -124,16 +73,13 @@ async def _handle_fishing_query(from_number: str, user_message: str):
         return
 
     # VERDE / AMARILLO — análisis completo
-    zonas      = _build_zonas(ranking)
-    condiciones = _build_condiciones(weather, satellite, water_quality)
-    map_filename = "mapa_cienrayas.png"
-    map_out_path = str(Path(MEDIA_DIR) / map_filename)
-
     try:
-        response_text, _ = await asyncio.gather(
+        response_text, map_filename = await asyncio.gather(
             generate_fishing_response(weather, satellite, water_quality, result.color),
             asyncio.to_thread(
-                generar_mapa, zonas, condiciones, datetime.now(), map_out_path,
+                generate_map, result.color,
+                satellite["sst"], satellite["chlorophyll"],
+                water_quality, ranking,
             ),
         )
     except Exception as e:
