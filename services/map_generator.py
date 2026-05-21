@@ -531,3 +531,219 @@ def generate_map(
                 facecolor=fig.get_facecolor())
     plt.close(fig)
     return filename
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# generar_mapa — versión mejorada: tile satelital + panel lateral (1000 × 600 px)
+# ─────────────────────────────────────────────────────────────────────────────
+
+_SEM_COL_V2 = {
+    "verde":    "#00C851",
+    "amarillo": "#FFB300",
+    "rojo":     "#FF4444",
+}
+
+
+def _basemap_or_fallback(ax) -> None:
+    """Tile CartoDB Dark Matter; si falla, polígonos oscuros hardcodeados."""
+    ax.set_facecolor("#0d1b2a")
+    try:
+        import contextily as ctx
+        ctx.add_basemap(
+            ax,
+            crs="EPSG:4326",
+            source=ctx.providers.CartoDB.DarkMatter,
+            zoom="auto",
+            attribution=False,
+        )
+        return
+    except Exception:
+        pass
+
+    # Fallback visual: tierra + cuerpo de agua a mano
+    ax.add_patch(plt.Polygon(
+        [[-74.9, 10.6], [-74.2, 10.6], [-74.2, 11.1], [-74.9, 11.1]],
+        closed=True, facecolor="#2d3d22", edgecolor="none", zorder=0,
+    ))
+    ax.add_patch(MplPolygon(
+        _CIENAGA, closed=True,
+        facecolor="#1a5c8a", edgecolor="#2a7ab8",
+        linewidth=1.0, alpha=0.88, zorder=2,
+    ))
+    for rv in [_CANO_CLARIN, _RIO_FUNDACION, _RIO_ARACATACA, _RIO_SEVILLA]:
+        ax.plot(rv[:, 0], rv[:, 1],
+                color="#1a7ab5", lw=1.4, alpha=0.6, zorder=3)
+    ax.text(-74.55, 10.84, "CIÉNAGA GRANDE\nDE SANTA MARTA",
+            ha="center", va="center", color="white",
+            fontsize=6.5, fontstyle="italic", alpha=0.28, zorder=4)
+
+
+def _north_arrow_v2(ax) -> None:
+    """Flecha de norte en la esquina inferior derecha del eje del mapa."""
+    ax.annotate(
+        "N", xy=(0.955, 0.07), xycoords="axes fraction",
+        ha="center", va="center", fontsize=8, fontweight="bold",
+        color="white",
+        path_effects=[pe.withStroke(linewidth=2, foreground="#0d1b2a")],
+    )
+    ax.annotate(
+        "", xy=(0.955, 0.13), xytext=(0.955, 0.07),
+        xycoords="axes fraction", textcoords="axes fraction",
+        arrowprops=dict(arrowstyle="-|>", color="white", lw=1.4),
+    )
+
+
+def generar_mapa(zonas: list, condiciones: dict, fecha) -> str:
+    """
+    Mapa PNG mejorado de la CGSM con tile satelital y panel lateral de condiciones.
+
+    Args:
+        zonas:       [{nombre, lat, lon, semaforo, ipp}]
+        condiciones: {sst, chl, viento_vel, viento_nombre, salinidad, od, luna}
+        fecha:       datetime del pronóstico
+
+    Returns:
+        "/tmp/mapa_cienrayas.png"
+    """
+    DPI = 150
+
+    # Habilitar emojis si el sistema tiene Segoe UI Emoji (Win) o Noto (Linux)
+    _prev_sans = matplotlib.rcParams.get("font.sans-serif", [])
+    matplotlib.rcParams["font.sans-serif"] = [
+        "DejaVu Sans", "Segoe UI Emoji", "Noto Color Emoji", "Noto Emoji",
+    ] + list(_prev_sans)
+
+    fig = plt.figure(figsize=(1000 / DPI, 600 / DPI),
+                     dpi=DPI, facecolor="#1a1a2e")
+
+    # ── Eje del mapa (izquierda ~64%) ─────────────────────────────────────────
+    ax = fig.add_axes([0.01, 0.07, 0.63, 0.80])
+    ax.set_xlim(-74.9, -74.2)
+    ax.set_ylim(10.6, 11.1)
+    ax.tick_params(colors="#4a5a6a", labelsize=5.5, length=2)
+    for sp in ax.spines.values():
+        sp.set_edgecolor("#2a3a4a")
+        sp.set_linewidth(0.5)
+
+    _basemap_or_fallback(ax)
+
+    ax.xaxis.set_major_locator(MultipleLocator(0.2))
+    ax.yaxis.set_major_locator(MultipleLocator(0.1))
+    ax.grid(True, color="white", alpha=0.05, linestyle="--", linewidth=0.35)
+
+    # Puntos de zonas — color semáforo, tamaño proporcional al IPP
+    for zona in zonas:
+        color  = _SEM_COL_V2.get(zona.get("semaforo", "verde"), "#00C851")
+        ipp    = float(zona.get("ipp", 50))
+        size   = 55 + (ipp / 100) * 270   # 55–325 pt²
+        lon    = float(zona["lon"])
+        lat    = float(zona["lat"])
+
+        ax.scatter(lon, lat, s=size, c=color,
+                   edgecolors="white", linewidths=0.9,
+                   zorder=10, alpha=0.92)
+        ax.annotate(
+            str(zona["nombre"]), (lon, lat),
+            xytext=(0, 9), textcoords="offset points",
+            ha="center", va="bottom",
+            color="white", fontsize=8, fontweight="bold", zorder=11,
+            path_effects=[pe.withStroke(linewidth=2.0, foreground="#0d1b2a")],
+        )
+
+    _north_arrow_v2(ax)
+
+    # ── Encabezado del mapa ───────────────────────────────────────────────────
+    hora = fecha.strftime("%I:%M")
+    ampm = "p.m." if fecha.hour >= 12 else "a.m."
+    fstr = f"{fecha.strftime('%d %b %Y')} · {hora} {ampm}"
+
+    fig.text(0.01, 0.990, "Mapa de zonas para hoy",
+             color="white", fontsize=9.5, fontweight="bold",
+             va="top", ha="left")
+    fig.text(0.01, 0.945, "Ciénaga Grande de Santa Marta",
+             color="#8aaabb", fontsize=7.5, va="top", ha="left")
+    fig.text(0.01, 0.910, fstr,
+             color="#607090", fontsize=6.5, va="top", ha="left")
+
+    # ── Pie del mapa ──────────────────────────────────────────────────────────
+    fig.text(0.01, 0.015, "Datos: NASA · IDEAM · clima en tiempo real",
+             color="#5a6070", fontsize=6, va="bottom", ha="left")
+
+    # ── Panel lateral (derecha ~33%) ──────────────────────────────────────────
+    ax_p = fig.add_axes([0.655, 0.0, 0.335, 1.0])
+    ax_p.axis("off")
+    ax_p.set_xlim(0, 1)
+    ax_p.set_ylim(0, 1)
+    ax_p.set_facecolor("#13132a")
+    ax_p.patch.set_alpha(0.87)
+
+    # Borde izquierdo del panel (separador visual)
+    ax_p.plot([0.0, 0.0], [0.0, 1.0],
+              color="#2a3a5a", lw=1.5, transform=ax_p.transData, zorder=20)
+
+    def T(x, y, s, **kw):  # texto en axes fraction del panel
+        ax_p.text(x, y, s, transform=ax_p.transAxes, **kw)
+
+    def H(y):  # separador horizontal
+        ax_p.plot([0.05, 0.95], [y, y],
+                  color="#2a3a5a", lw=0.7, transform=ax_p.transAxes)
+
+    # Fecha/hora en el encabezado del panel
+    T(0.5, 0.965, fstr,
+      ha="center", va="top", color="#8aaabb",
+      fontsize=7.0, fontweight="bold")
+    H(0.910)
+
+    # Sección Semáforo
+    T(0.5, 0.897, "Semáforo",
+      ha="center", va="top", color="white",
+      fontsize=8.5, fontweight="bold")
+
+    for k, (color, label) in enumerate([
+        ("#00C851", "Buenas condiciones"),
+        ("#FFB300", "Precaución"),
+        ("#FF4444", "No salir hoy"),
+    ]):
+        y = 0.835 - k * 0.078
+        T(0.11, y, "●", ha="center", va="center", color=color, fontsize=13)
+        T(0.23, y, label, ha="left", va="center", color="white", fontsize=7.5)
+
+    H(0.595)
+
+    # Sección Condiciones ambientales
+    T(0.5, 0.583, "Condiciones ambientales",
+      ha="center", va="top", color="white",
+      fontsize=8.0, fontweight="bold")
+
+    sst  = condiciones.get("sst",           "–")
+    chl  = condiciones.get("chl",           "–")
+    vel  = condiciones.get("viento_vel",    "–")
+    nom  = condiciones.get("viento_nombre", "viento")
+    sal  = condiciones.get("salinidad",     "–")
+    od   = condiciones.get("od",            "–")
+    luna = condiciones.get("luna",          "–")
+
+    # Símbolos DejaVu Sans (evita cuadros en sistemas sin fuentes emoji)
+    rows = [
+        ("⊙", "T. superficial:",  f"{sst}°C"),
+        ("✦", "Clorofila:",       f"{chl} mg/m³"),
+        ("≋", f"Viento ({nom}):", f"{vel} km/h"),
+        ("◇", "Salinidad:",       f"{sal} PSU"),
+        ("◉", "Oxígeno dis.:",   f"{od} mg/L"),
+        ("☽", "Luna:",            str(luna)),
+    ]
+    for j, (icon, label, value) in enumerate(rows):
+        y = 0.520 - j * 0.082
+        T(0.06, y, icon,  ha="left",  va="center", fontsize=9.5)
+        T(0.22, y, label, ha="left",  va="center", color="#8aaabb", fontsize=7.0)
+        T(0.97, y, value, ha="right", va="center", color="white",
+          fontsize=7.5, fontweight="bold")
+
+    # ── Guardar ───────────────────────────────────────────────────────────────
+    # tempfile.gettempdir() devuelve /tmp en Linux (Render) y %TEMP% en Windows
+    import tempfile
+    out = str(Path(tempfile.gettempdir()) / "mapa_cienrayas.png")
+    plt.savefig(out, dpi=DPI, bbox_inches=None,
+                facecolor=fig.get_facecolor())
+    plt.close(fig)
+    return out
