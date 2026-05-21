@@ -593,7 +593,7 @@ def _north_arrow_v2(ax) -> None:
     )
 
 
-def generar_mapa(zonas: list, condiciones: dict, fecha) -> str:
+def generar_mapa(zonas: list, condiciones: dict, fecha, out_path: str | None = None) -> str:
     """
     Mapa PNG mejorado de la CGSM con tile satelital y panel lateral de condiciones.
 
@@ -601,9 +601,10 @@ def generar_mapa(zonas: list, condiciones: dict, fecha) -> str:
         zonas:       [{nombre, lat, lon, semaforo, ipp}]
         condiciones: {sst, chl, viento_vel, viento_nombre, salinidad, od, luna}
         fecha:       datetime del pronóstico
+        out_path:    ruta de salida; si None usa /tmp/mapa_cienrayas.png
 
     Returns:
-        "/tmp/mapa_cienrayas.png"
+        ruta absoluta al PNG generado
     """
     DPI = 150
 
@@ -740,9 +741,8 @@ def generar_mapa(zonas: list, condiciones: dict, fecha) -> str:
           fontsize=7.5, fontweight="bold")
 
     # ── Guardar ───────────────────────────────────────────────────────────────
-    # tempfile.gettempdir() devuelve /tmp en Linux (Render) y %TEMP% en Windows
     import tempfile
-    out = str(Path(tempfile.gettempdir()) / "mapa_cienrayas.png")
+    out = out_path or str(Path(tempfile.gettempdir()) / "mapa_cienrayas.png")
     plt.savefig(out, dpi=DPI, bbox_inches=None,
                 facecolor=fig.get_facecolor())
     plt.close(fig)
