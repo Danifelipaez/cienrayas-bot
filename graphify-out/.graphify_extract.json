@@ -1,0 +1,5679 @@
+{
+  "nodes": [
+    {
+      "id": "config_py",
+      "label": "config.py",
+      "file_type": "code",
+      "source_file": "config.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "main_py",
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "cienrayas_bot_main_lifespan",
+      "label": "lifespan()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L17"
+    },
+    {
+      "id": "fastapi",
+      "label": "FastAPI",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L17"
+    },
+    {
+      "id": "cienrayas_bot_main_health",
+      "label": "health()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L44"
+    },
+    {
+      "id": "cienrayas_bot_main_ping",
+      "label": "ping()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L49"
+    },
+    {
+      "id": "cienrayas_bot_main_rationale_50",
+      "label": "UptimeRobot llama aqu\u00ed cada 10 min para evitar que Render duerma el servicio.",
+      "file_type": "rationale",
+      "source_file": "main.py",
+      "source_location": "L50"
+    },
+    {
+      "id": "test_bot_py",
+      "label": "test_bot.py",
+      "file_type": "code",
+      "source_file": "test_bot.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "cienrayas_bot_test_bot_main",
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "test_bot.py",
+      "source_location": "L38"
+    },
+    {
+      "id": "cienrayas_bot_test_bot_rationale_1",
+      "label": "Simulador completo del bot \u2014 sin WhatsApp ni ngrok. Muestra exactamente el mens",
+      "file_type": "rationale",
+      "source_file": "test_bot.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_data_py",
+      "label": "test_data.py",
+      "file_type": "code",
+      "source_file": "test_data.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "cienrayas_bot_test_data_main",
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "test_data.py",
+      "source_location": "L18"
+    },
+    {
+      "id": "cienrayas_bot_test_data_rationale_1",
+      "label": "Prueba r\u00e1pida de todas las fuentes de datos y el an\u00e1lisis de zonas. NO necesita",
+      "file_type": "rationale",
+      "source_file": "test_data.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_knowledge_py",
+      "label": "knowledge.py",
+      "file_type": "code",
+      "source_file": "core/knowledge.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_knowledge_local_wind_name",
+      "label": "local_wind_name()",
+      "file_type": "code",
+      "source_file": "core/knowledge.py",
+      "source_location": "L80"
+    },
+    {
+      "id": "core_knowledge_py_str",
+      "label": "str",
+      "file_type": "code",
+      "source_file": "core/knowledge.py",
+      "source_location": "L80"
+    },
+    {
+      "id": "core_knowledge_py_bool",
+      "label": "bool",
+      "file_type": "code",
+      "source_file": "core/knowledge.py",
+      "source_location": "L80"
+    },
+    {
+      "id": "core_knowledge_interpret_water_color",
+      "label": "interpret_water_color()",
+      "file_type": "code",
+      "source_file": "core/knowledge.py",
+      "source_location": "L101"
+    },
+    {
+      "id": "core_knowledge_py_float",
+      "label": "float",
+      "file_type": "code",
+      "source_file": "core/knowledge.py",
+      "source_location": "L101"
+    },
+    {
+      "id": "core_knowledge_get_lunar_phase",
+      "label": "get_lunar_phase()",
+      "file_type": "code",
+      "source_file": "core/knowledge.py",
+      "source_location": "L123"
+    },
+    {
+      "id": "core_knowledge_get_fishing_context",
+      "label": "get_fishing_context()",
+      "file_type": "code",
+      "source_file": "core/knowledge.py",
+      "source_location": "L324"
+    },
+    {
+      "id": "core_knowledge_rationale_1",
+      "label": "Conocimiento t\u00e9cnico y emp\u00edrico de la Ci\u00e9naga Grande de Santa Marta. Fuente t\u00e9c",
+      "file_type": "rationale",
+      "source_file": "core/knowledge.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_knowledge_rationale_81",
+      "label": "Devuelve (nombre_local, es_peligroso) para un c\u00f3digo de direcci\u00f3n cardinal.",
+      "file_type": "rationale",
+      "source_file": "core/knowledge.py",
+      "source_location": "L81"
+    },
+    {
+      "id": "core_knowledge_rationale_102",
+      "label": "Infiere el 'color' del agua a partir de datos satelitales/IDEAM     y lo traduc",
+      "file_type": "rationale",
+      "source_file": "core/knowledge.py",
+      "source_location": "L102"
+    },
+    {
+      "id": "core_knowledge_rationale_124",
+      "label": "Calcula la fase lunar actual y su relevancia para el camar\u00f3n.     Algoritmo bas",
+      "file_type": "rationale",
+      "source_file": "core/knowledge.py",
+      "source_location": "L124"
+    },
+    {
+      "id": "core_knowledge_rationale_325",
+      "label": "Genera un bloque de contexto para el LLM combinando:     - Datos t\u00e9cnicos INVEM",
+      "file_type": "rationale",
+      "source_file": "core/knowledge.py",
+      "source_location": "L325"
+    },
+    {
+      "id": "core_prompts_py",
+      "label": "prompts.py",
+      "file_type": "code",
+      "source_file": "core/prompts.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_prompts_wq_plain",
+      "label": "_wq_plain()",
+      "file_type": "code",
+      "source_file": "core/prompts.py",
+      "source_location": "L34"
+    },
+    {
+      "id": "core_prompts_py_str",
+      "label": "str",
+      "file_type": "code",
+      "source_file": "core/prompts.py",
+      "source_location": "L34"
+    },
+    {
+      "id": "core_prompts_zone_ranking_text",
+      "label": "_zone_ranking_text()",
+      "file_type": "code",
+      "source_file": "core/prompts.py",
+      "source_location": "L86"
+    },
+    {
+      "id": "core_prompts_build_fishing_prompt",
+      "label": "build_fishing_prompt()",
+      "file_type": "code",
+      "source_file": "core/prompts.py",
+      "source_location": "L100"
+    },
+    {
+      "id": "core_prompts_rationale_35",
+      "label": "Convierte los par\u00e1metros de calidad del agua a lenguaje de pescador.",
+      "file_type": "rationale",
+      "source_file": "core/prompts.py",
+      "source_location": "L35"
+    },
+    {
+      "id": "core_semaphore_py",
+      "label": "semaphore.py",
+      "file_type": "code",
+      "source_file": "core/semaphore.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_semaphore_semaphoreresult",
+      "label": "SemaphoreResult",
+      "file_type": "code",
+      "source_file": "core/semaphore.py",
+      "source_location": "L6"
+    },
+    {
+      "id": "core_semaphore_evaluate",
+      "label": "evaluate()",
+      "file_type": "code",
+      "source_file": "core/semaphore.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "core_state_py",
+      "label": "state.py",
+      "file_type": "code",
+      "source_file": "core/state.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_state_is_duplicate",
+      "label": "is_duplicate()",
+      "file_type": "code",
+      "source_file": "core/state.py",
+      "source_location": "L15"
+    },
+    {
+      "id": "core_state_py_str",
+      "label": "str",
+      "file_type": "code",
+      "source_file": "core/state.py",
+      "source_location": "L15"
+    },
+    {
+      "id": "core_state_py_bool",
+      "label": "bool",
+      "file_type": "code",
+      "source_file": "core/state.py",
+      "source_location": "L15"
+    },
+    {
+      "id": "core_state_purge_old_ids",
+      "label": "_purge_old_ids()",
+      "file_type": "code",
+      "source_file": "core/state.py",
+      "source_location": "L24"
+    },
+    {
+      "id": "core_state_get_state",
+      "label": "get_state()",
+      "file_type": "code",
+      "source_file": "core/state.py",
+      "source_location": "L38"
+    },
+    {
+      "id": "core_state_set_state",
+      "label": "set_state()",
+      "file_type": "code",
+      "source_file": "core/state.py",
+      "source_location": "L42"
+    },
+    {
+      "id": "core_state_record_query",
+      "label": "record_query()",
+      "file_type": "code",
+      "source_file": "core/state.py",
+      "source_location": "L46"
+    },
+    {
+      "id": "core_state_record_feedback",
+      "label": "record_feedback()",
+      "file_type": "code",
+      "source_file": "core/state.py",
+      "source_location": "L53"
+    },
+    {
+      "id": "core_state_is_awaiting_feedback",
+      "label": "is_awaiting_feedback()",
+      "file_type": "code",
+      "source_file": "core/state.py",
+      "source_location": "L63"
+    },
+    {
+      "id": "core_state_looks_like_new_query",
+      "label": "looks_like_new_query()",
+      "file_type": "code",
+      "source_file": "core/state.py",
+      "source_location": "L67"
+    },
+    {
+      "id": "core_state_looks_like_feedback",
+      "label": "looks_like_feedback()",
+      "file_type": "code",
+      "source_file": "core/state.py",
+      "source_location": "L73"
+    },
+    {
+      "id": "core_state_rationale_1",
+      "label": "Gesti\u00f3n en memoria del estado de conversaci\u00f3n por n\u00famero de tel\u00e9fono. En produc",
+      "file_type": "rationale",
+      "source_file": "core/state.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_state_rationale_16",
+      "label": "Devuelve True si este mensaje ya fue procesado recientemente.",
+      "file_type": "rationale",
+      "source_file": "core/state.py",
+      "source_location": "L16"
+    },
+    {
+      "id": "core_state_rationale_25",
+      "label": "Limpia IDs m\u00e1s viejos que el TTL para no crecer indefinidamente.",
+      "file_type": "rationale",
+      "source_file": "core/state.py",
+      "source_location": "L25"
+    },
+    {
+      "id": "core_state_rationale_68",
+      "label": "Detecta si el pescador quiere un an\u00e1lisis nuevo en lugar de dar feedback.",
+      "file_type": "rationale",
+      "source_file": "core/state.py",
+      "source_location": "L68"
+    },
+    {
+      "id": "core_state_rationale_74",
+      "label": "Cuando el bot est\u00e1 esperando feedback, cualquier mensaje se trata como     repo",
+      "file_type": "rationale",
+      "source_file": "core/state.py",
+      "source_location": "L74"
+    },
+    {
+      "id": "core_zone_analysis_py",
+      "label": "zone_analysis.py",
+      "file_type": "code",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_zone_analysis_zone",
+      "label": "Zone",
+      "file_type": "code",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L28"
+    },
+    {
+      "id": "core_zone_analysis_score_od",
+      "label": "_score_od()",
+      "file_type": "code",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L90"
+    },
+    {
+      "id": "core_zone_analysis_py_float",
+      "label": "float",
+      "file_type": "code",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L90"
+    },
+    {
+      "id": "core_zone_analysis_score_sst",
+      "label": "_score_sst()",
+      "file_type": "code",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L101"
+    },
+    {
+      "id": "core_zone_analysis_score_chlorophyll",
+      "label": "_score_chlorophyll()",
+      "file_type": "code",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L112"
+    },
+    {
+      "id": "core_zone_analysis_score_turbidity",
+      "label": "_score_turbidity()",
+      "file_type": "code",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L123"
+    },
+    {
+      "id": "core_zone_analysis_score_ph",
+      "label": "_score_ph()",
+      "file_type": "code",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L134"
+    },
+    {
+      "id": "core_zone_analysis_score_salinity_for_zone",
+      "label": "_score_salinity_for_zone()",
+      "file_type": "code",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L145"
+    },
+    {
+      "id": "core_zone_analysis_zone_ipp",
+      "label": "_zone_ipp()",
+      "file_type": "code",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L172"
+    },
+    {
+      "id": "core_zone_analysis_recommend_zone",
+      "label": "recommend_zone()",
+      "file_type": "code",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L194"
+    },
+    {
+      "id": "core_zone_analysis_full_ranking",
+      "label": "full_ranking()",
+      "file_type": "code",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L200"
+    },
+    {
+      "id": "core_zone_analysis_rationale_1",
+      "label": "An\u00e1lisis multivariable para determinar la zona de mayor probabilidad de pesca e",
+      "file_type": "rationale",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_zone_analysis_rationale_91",
+      "label": "Ox\u00edgeno disuelto: 0 mg/L \u2192 0, \u00f3ptimo 7 mg/L \u2192 100.",
+      "file_type": "rationale",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L91"
+    },
+    {
+      "id": "core_zone_analysis_rationale_102",
+      "label": "Temperatura superficial: \u00f3ptimo 26\u201330 \u00b0C \u2192 100.",
+      "file_type": "rationale",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L102"
+    },
+    {
+      "id": "core_zone_analysis_rationale_113",
+      "label": "Clorofila: >4 mg/m\u00b3 es buena mancha; <0.5 agua pobre.",
+      "file_type": "rationale",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L113"
+    },
+    {
+      "id": "core_zone_analysis_rationale_124",
+      "label": "Turbidez: baja (<30 NTU) es mejor para boliche; muy alta perjudica redes.",
+      "file_type": "rationale",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L124"
+    },
+    {
+      "id": "core_zone_analysis_rationale_135",
+      "label": "pH: rango ideal estuarino 7.0\u20138.5.",
+      "file_type": "rationale",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L135"
+    },
+    {
+      "id": "core_zone_analysis_rationale_146",
+      "label": "Puntaje de salinidad: cu\u00e1nto se acerca la salinidad actual al rango     \u00f3ptimo",
+      "file_type": "rationale",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L146"
+    },
+    {
+      "id": "core_zone_analysis_rationale_173",
+      "label": "\u00cdndice de Potencial Pesquero (IPP) de 0 a 100 para una zona.",
+      "file_type": "rationale",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L173"
+    },
+    {
+      "id": "core_zone_analysis_rationale_195",
+      "label": "Devuelve la zona con el IPP m\u00e1s alto.",
+      "file_type": "rationale",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L195"
+    },
+    {
+      "id": "core_zone_analysis_rationale_201",
+      "label": "Ranking completo de zonas \u2014 \u00fatil para el mapa y el LLM.",
+      "file_type": "rationale",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L201"
+    },
+    {
+      "id": "core_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "core/__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "routers_webhook_py",
+      "label": "webhook.py",
+      "file_type": "code",
+      "source_file": "routers/webhook.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "routers_webhook_handle_fishing_query",
+      "label": "_handle_fishing_query()",
+      "file_type": "code",
+      "source_file": "routers/webhook.py",
+      "source_location": "L42"
+    },
+    {
+      "id": "routers_webhook_py_str",
+      "label": "str",
+      "file_type": "code",
+      "source_file": "routers/webhook.py",
+      "source_location": "L42"
+    },
+    {
+      "id": "routers_webhook_handle_feedback",
+      "label": "_handle_feedback()",
+      "file_type": "code",
+      "source_file": "routers/webhook.py",
+      "source_location": "L119"
+    },
+    {
+      "id": "routers_webhook_verify_webhook",
+      "label": "verify_webhook()",
+      "file_type": "code",
+      "source_file": "routers/webhook.py",
+      "source_location": "L133"
+    },
+    {
+      "id": "routers_webhook_receive_webhook",
+      "label": "receive_webhook()",
+      "file_type": "code",
+      "source_file": "routers/webhook.py",
+      "source_location": "L145"
+    },
+    {
+      "id": "backgroundtasks",
+      "label": "BackgroundTasks",
+      "file_type": "code",
+      "source_file": "routers/webhook.py",
+      "source_location": "L145"
+    },
+    {
+      "id": "request",
+      "label": "Request",
+      "file_type": "code",
+      "source_file": "routers/webhook.py",
+      "source_location": "L145"
+    },
+    {
+      "id": "routers_webhook_rationale_1",
+      "label": "Webhook para Meta WhatsApp Cloud API.  Flujo de verificaci\u00f3n inicial (una sola",
+      "file_type": "rationale",
+      "source_file": "routers/webhook.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "routers_webhook_rationale_138",
+      "label": "Meta llama a este endpoint una sola vez para verificar el webhook.",
+      "file_type": "rationale",
+      "source_file": "routers/webhook.py",
+      "source_location": "L138"
+    },
+    {
+      "id": "routers_webhook_rationale_146",
+      "label": "Meta env\u00eda aqu\u00ed cada mensaje entrante.",
+      "file_type": "rationale",
+      "source_file": "routers/webhook.py",
+      "source_location": "L146"
+    },
+    {
+      "id": "routers_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "routers/__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "services_llm_py",
+      "label": "llm.py",
+      "file_type": "code",
+      "source_file": "services/llm.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "services_llm_get_semaphore",
+      "label": "_get_semaphore()",
+      "file_type": "code",
+      "source_file": "services/llm.py",
+      "source_location": "L23"
+    },
+    {
+      "id": "semaphore",
+      "label": "Semaphore",
+      "file_type": "code",
+      "source_file": "services/llm.py",
+      "source_location": "L23"
+    },
+    {
+      "id": "services_llm_call_groq",
+      "label": "_call_groq()",
+      "file_type": "code",
+      "source_file": "services/llm.py",
+      "source_location": "L30"
+    },
+    {
+      "id": "services_llm_py_str",
+      "label": "str",
+      "file_type": "code",
+      "source_file": "services/llm.py",
+      "source_location": "L30"
+    },
+    {
+      "id": "services_llm_generate_fishing_response",
+      "label": "generate_fishing_response()",
+      "file_type": "code",
+      "source_file": "services/llm.py",
+      "source_location": "L55"
+    },
+    {
+      "id": "services_llm_generate_feedback_ack",
+      "label": "generate_feedback_ack()",
+      "file_type": "code",
+      "source_file": "services/llm.py",
+      "source_location": "L82"
+    },
+    {
+      "id": "services_map_generator_py",
+      "label": "map_generator.py",
+      "file_type": "code",
+      "source_file": "services/map_generator.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "services_map_generator_ipp_color",
+      "label": "_ipp_color()",
+      "file_type": "code",
+      "source_file": "services/map_generator.py",
+      "source_location": "L175"
+    },
+    {
+      "id": "services_map_generator_py_float",
+      "label": "float",
+      "file_type": "code",
+      "source_file": "services/map_generator.py",
+      "source_location": "L175"
+    },
+    {
+      "id": "services_map_generator_py_str",
+      "label": "str",
+      "file_type": "code",
+      "source_file": "services/map_generator.py",
+      "source_location": "L175"
+    },
+    {
+      "id": "services_map_generator_north_arrow",
+      "label": "_north_arrow()",
+      "file_type": "code",
+      "source_file": "services/map_generator.py",
+      "source_location": "L182"
+    },
+    {
+      "id": "services_map_generator_scale_bar",
+      "label": "_scale_bar()",
+      "file_type": "code",
+      "source_file": "services/map_generator.py",
+      "source_location": "L196"
+    },
+    {
+      "id": "services_map_generator_cache_hit",
+      "label": "_cache_hit()",
+      "file_type": "code",
+      "source_file": "services/map_generator.py",
+      "source_location": "L213"
+    },
+    {
+      "id": "services_map_generator_generate_map",
+      "label": "generate_map()",
+      "file_type": "code",
+      "source_file": "services/map_generator.py",
+      "source_location": "L224"
+    },
+    {
+      "id": "services_map_generator_render_map",
+      "label": "_render_map()",
+      "file_type": "code",
+      "source_file": "services/map_generator.py",
+      "source_location": "L249"
+    },
+    {
+      "id": "services_map_generator_basemap_or_fallback",
+      "label": "_basemap_or_fallback()",
+      "file_type": "code",
+      "source_file": "services/map_generator.py",
+      "source_location": "L597"
+    },
+    {
+      "id": "services_map_generator_north_arrow_v2",
+      "label": "_north_arrow_v2()",
+      "file_type": "code",
+      "source_file": "services/map_generator.py",
+      "source_location": "L631"
+    },
+    {
+      "id": "services_map_generator_generar_mapa",
+      "label": "generar_mapa()",
+      "file_type": "code",
+      "source_file": "services/map_generator.py",
+      "source_location": "L646"
+    },
+    {
+      "id": "services_map_generator_rationale_1",
+      "label": "Genera el mapa PNG de la Ci\u00e9naga Grande de Santa Marta. Estilo cartograf\u00eda natu",
+      "file_type": "rationale",
+      "source_file": "services/map_generator.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "services_map_generator_rationale_214",
+      "label": "Retorna el filename cacheado si sigue vigente, o None.",
+      "file_type": "rationale",
+      "source_file": "services/map_generator.py",
+      "source_location": "L214"
+    },
+    {
+      "id": "services_map_generator_rationale_256",
+      "label": "Genera el PNG del mapa sin tocar el cach\u00e9 \u2014 llamar solo desde dentro del lock.",
+      "file_type": "rationale",
+      "source_file": "services/map_generator.py",
+      "source_location": "L256"
+    },
+    {
+      "id": "services_map_generator_rationale_598",
+      "label": "Tile CartoDB Dark Matter; si falla, pol\u00edgonos oscuros hardcodeados.",
+      "file_type": "rationale",
+      "source_file": "services/map_generator.py",
+      "source_location": "L598"
+    },
+    {
+      "id": "services_map_generator_rationale_632",
+      "label": "Flecha de norte en la esquina inferior derecha del eje del mapa.",
+      "file_type": "rationale",
+      "source_file": "services/map_generator.py",
+      "source_location": "L632"
+    },
+    {
+      "id": "services_map_generator_rationale_647",
+      "label": "Mapa PNG mejorado de la CGSM con tile satelital y panel lateral de condiciones.",
+      "file_type": "rationale",
+      "source_file": "services/map_generator.py",
+      "source_location": "L647"
+    },
+    {
+      "id": "services_satellite_py",
+      "label": "satellite.py",
+      "file_type": "code",
+      "source_file": "services/satellite.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "services_satellite_erddap_average",
+      "label": "_erddap_average()",
+      "file_type": "code",
+      "source_file": "services/satellite.py",
+      "source_location": "L20"
+    },
+    {
+      "id": "services_satellite_py_str",
+      "label": "str",
+      "file_type": "code",
+      "source_file": "services/satellite.py",
+      "source_location": "L20"
+    },
+    {
+      "id": "services_satellite_py_float",
+      "label": "float",
+      "file_type": "code",
+      "source_file": "services/satellite.py",
+      "source_location": "L20"
+    },
+    {
+      "id": "services_satellite_get_sst",
+      "label": "get_sst()",
+      "file_type": "code",
+      "source_file": "services/satellite.py",
+      "source_location": "L40"
+    },
+    {
+      "id": "services_satellite_get_chlorophyll",
+      "label": "get_chlorophyll()",
+      "file_type": "code",
+      "source_file": "services/satellite.py",
+      "source_location": "L56"
+    },
+    {
+      "id": "services_satellite_get_satellite_data",
+      "label": "get_satellite_data()",
+      "file_type": "code",
+      "source_file": "services/satellite.py",
+      "source_location": "L74"
+    },
+    {
+      "id": "services_satellite_rationale_1",
+      "label": "Obtiene temperatura superficial del agua (SST) y clorofila-a desde NASA ERDDAP.",
+      "file_type": "rationale",
+      "source_file": "services/satellite.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "services_satellite_rationale_41",
+      "label": "Devuelve (sst_celsius, fuente).",
+      "file_type": "rationale",
+      "source_file": "services/satellite.py",
+      "source_location": "L41"
+    },
+    {
+      "id": "services_satellite_rationale_57",
+      "label": "Devuelve (chl_mg_m3, fuente). Usa compuesto de 8 d\u00edas para mejor cobertura nubos",
+      "file_type": "rationale",
+      "source_file": "services/satellite.py",
+      "source_location": "L57"
+    },
+    {
+      "id": "services_water_quality_py",
+      "label": "water_quality.py",
+      "file_type": "code",
+      "source_file": "services/water_quality.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "services_water_quality_seasonal_values",
+      "label": "_seasonal_values()",
+      "file_type": "code",
+      "source_file": "services/water_quality.py",
+      "source_location": "L62"
+    },
+    {
+      "id": "int",
+      "label": "int",
+      "file_type": "code",
+      "source_file": "services/water_quality.py",
+      "source_location": "L62"
+    },
+    {
+      "id": "services_water_quality_try_ideam_dhime",
+      "label": "_try_ideam_dhime()",
+      "file_type": "code",
+      "source_file": "services/water_quality.py",
+      "source_location": "L75"
+    },
+    {
+      "id": "services_water_quality_py_str",
+      "label": "str",
+      "file_type": "code",
+      "source_file": "services/water_quality.py",
+      "source_location": "L75"
+    },
+    {
+      "id": "services_water_quality_season_label",
+      "label": "_season_label()",
+      "file_type": "code",
+      "source_file": "services/water_quality.py",
+      "source_location": "L123"
+    },
+    {
+      "id": "services_water_quality_fetch_from_ideam",
+      "label": "_fetch_from_ideam()",
+      "file_type": "code",
+      "source_file": "services/water_quality.py",
+      "source_location": "L128"
+    },
+    {
+      "id": "services_water_quality_refresh_cache",
+      "label": "refresh_cache()",
+      "file_type": "code",
+      "source_file": "services/water_quality.py",
+      "source_location": "L138"
+    },
+    {
+      "id": "services_water_quality_get_water_quality",
+      "label": "get_water_quality()",
+      "file_type": "code",
+      "source_file": "services/water_quality.py",
+      "source_location": "L158"
+    },
+    {
+      "id": "services_water_quality_daily_refresh_loop",
+      "label": "daily_refresh_loop()",
+      "file_type": "code",
+      "source_file": "services/water_quality.py",
+      "source_location": "L173"
+    },
+    {
+      "id": "services_water_quality_rationale_1",
+      "label": "Calidad del agua de la Ci\u00e9naga Grande de Santa Marta.  Estrategia de datos (en",
+      "file_type": "rationale",
+      "source_file": "services/water_quality.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "services_water_quality_rationale_76",
+      "label": "Intenta obtener el \u00faltimo registro de calidad de agua de una estaci\u00f3n     IDEAM",
+      "file_type": "rationale",
+      "source_file": "services/water_quality.py",
+      "source_location": "L76"
+    },
+    {
+      "id": "services_water_quality_rationale_129",
+      "label": "Intenta todas las estaciones IDEAM; devuelve el primer resultado v\u00e1lido.",
+      "file_type": "rationale",
+      "source_file": "services/water_quality.py",
+      "source_location": "L129"
+    },
+    {
+      "id": "services_water_quality_rationale_139",
+      "label": "Fuerza una actualizaci\u00f3n del cach\u00e9 de calidad del agua.     Llamado al inicio y",
+      "file_type": "rationale",
+      "source_file": "services/water_quality.py",
+      "source_location": "L139"
+    },
+    {
+      "id": "services_water_quality_rationale_159",
+      "label": "Devuelve los par\u00e1metros de calidad del agua de la CGSM.     Usa el cach\u00e9 si es",
+      "file_type": "rationale",
+      "source_file": "services/water_quality.py",
+      "source_location": "L159"
+    },
+    {
+      "id": "services_water_quality_rationale_174",
+      "label": "Tarea de fondo: actualiza el cach\u00e9 de calidad del agua cada 24 h.     Se inicia",
+      "file_type": "rationale",
+      "source_file": "services/water_quality.py",
+      "source_location": "L174"
+    },
+    {
+      "id": "services_weather_py",
+      "label": "weather.py",
+      "file_type": "code",
+      "source_file": "services/weather.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "services_weather_direction_name",
+      "label": "_direction_name()",
+      "file_type": "code",
+      "source_file": "services/weather.py",
+      "source_location": "L35"
+    },
+    {
+      "id": "services_weather_py_float",
+      "label": "float",
+      "file_type": "code",
+      "source_file": "services/weather.py",
+      "source_location": "L35"
+    },
+    {
+      "id": "services_weather_py_str",
+      "label": "str",
+      "file_type": "code",
+      "source_file": "services/weather.py",
+      "source_location": "L35"
+    },
+    {
+      "id": "services_weather_get_weather",
+      "label": "get_weather()",
+      "file_type": "code",
+      "source_file": "services/weather.py",
+      "source_location": "L40"
+    },
+    {
+      "id": "services_whatsapp_py",
+      "label": "whatsapp.py",
+      "file_type": "code",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "services_whatsapp_send_text",
+      "label": "send_text()",
+      "file_type": "code",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L19"
+    },
+    {
+      "id": "services_whatsapp_py_str",
+      "label": "str",
+      "file_type": "code",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L19"
+    },
+    {
+      "id": "services_whatsapp_send_image",
+      "label": "send_image()",
+      "file_type": "code",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L35"
+    },
+    {
+      "id": "services_whatsapp_send",
+      "label": "send()",
+      "file_type": "code",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L51"
+    },
+    {
+      "id": "services_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "services/__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "cienrayas_bot",
+      "label": "CienRayas Bot",
+      "file_type": "code"
+    },
+    {
+      "id": "fastapi_app",
+      "label": "FastAPI Application",
+      "file_type": "code"
+    },
+    {
+      "id": "config_module",
+      "label": "Configuration Module",
+      "file_type": "code"
+    },
+    {
+      "id": "core_module",
+      "label": "Core Business Logic",
+      "file_type": "code"
+    },
+    {
+      "id": "knowledge_py",
+      "label": "knowledge.py",
+      "file_type": "code"
+    },
+    {
+      "id": "prompts_py",
+      "label": "prompts.py",
+      "file_type": "code"
+    },
+    {
+      "id": "semaphore_py",
+      "label": "semaphore.py",
+      "file_type": "code"
+    },
+    {
+      "id": "zone_analysis_py",
+      "label": "zone_analysis.py",
+      "file_type": "code"
+    },
+    {
+      "id": "state_py",
+      "label": "state.py",
+      "file_type": "code"
+    },
+    {
+      "id": "routers_module",
+      "label": "Routers Module",
+      "file_type": "code"
+    },
+    {
+      "id": "webhook_py",
+      "label": "webhook.py",
+      "file_type": "code"
+    },
+    {
+      "id": "services_module",
+      "label": "Services Module",
+      "file_type": "code"
+    },
+    {
+      "id": "llm_py",
+      "label": "llm.py",
+      "file_type": "code"
+    },
+    {
+      "id": "weather_py",
+      "label": "weather.py",
+      "file_type": "code"
+    },
+    {
+      "id": "satellite_py",
+      "label": "satellite.py",
+      "file_type": "code"
+    },
+    {
+      "id": "water_quality_py",
+      "label": "water_quality.py",
+      "file_type": "code"
+    },
+    {
+      "id": "map_generator_py",
+      "label": "map_generator.py",
+      "file_type": "code"
+    },
+    {
+      "id": "whatsapp_py",
+      "label": "whatsapp.py",
+      "file_type": "code"
+    },
+    {
+      "id": "groq_api",
+      "label": "Groq LLM API",
+      "file_type": "code"
+    },
+    {
+      "id": "meta_whatsapp_api",
+      "label": "Meta WhatsApp Cloud API",
+      "file_type": "code"
+    },
+    {
+      "id": "wttr_in_api",
+      "label": "wttr.in Weather API",
+      "file_type": "code"
+    },
+    {
+      "id": "nasa_erddap",
+      "label": "NASA ERDDAP Satellite API",
+      "file_type": "code"
+    },
+    {
+      "id": "ideam_dhime",
+      "label": "IDEAM DHIME Water Quality API",
+      "file_type": "code"
+    },
+    {
+      "id": "semaphore_signal",
+      "label": "Safety Semaphore (Verde/Amarillo/Rojo)",
+      "file_type": "code"
+    },
+    {
+      "id": "fishing_zones",
+      "label": "6 Fishing Zones",
+      "file_type": "code"
+    },
+    {
+      "id": "ipp_index",
+      "label": "Indice de Potencial Pesquero (IPP)",
+      "file_type": "code"
+    },
+    {
+      "id": "cienaga_location",
+      "label": "Cienaga Grande de Santa Marta",
+      "file_type": "document"
+    },
+    {
+      "id": "fisher_user",
+      "label": "Pescador (Fisher User)",
+      "file_type": "document"
+    },
+    {
+      "id": "sr_adelmo",
+      "label": "Sr. Adelmo",
+      "file_type": "document"
+    },
+    {
+      "id": "weather_data",
+      "label": "Weather Data",
+      "file_type": "code"
+    },
+    {
+      "id": "satellite_data",
+      "label": "Satellite Data (SST, Chlorophyll)",
+      "file_type": "code"
+    },
+    {
+      "id": "water_quality_data",
+      "label": "Water Quality Parameters",
+      "file_type": "code"
+    },
+    {
+      "id": "fishing_context",
+      "label": "Fishing Context",
+      "file_type": "code"
+    },
+    {
+      "id": "local_wind_names",
+      "label": "Local Wind Names",
+      "file_type": "code"
+    },
+    {
+      "id": "water_color_signals",
+      "label": "Water Color Signals",
+      "file_type": "code"
+    },
+    {
+      "id": "fishing_methods",
+      "label": "Fishing Methods/Arts",
+      "file_type": "code"
+    },
+    {
+      "id": "fish_species",
+      "label": "Fish Species",
+      "file_type": "code"
+    },
+    {
+      "id": "monitoring_points",
+      "label": "INVEMAR Monitoring Points",
+      "file_type": "code"
+    },
+    {
+      "id": "conversation_state",
+      "label": "Conversation State Manager",
+      "file_type": "code"
+    },
+    {
+      "id": "feedback_loop",
+      "label": "Fisher Feedback Loop",
+      "file_type": "code"
+    },
+    {
+      "id": "llm_cache",
+      "label": "LLM Response Cache",
+      "file_type": "code"
+    },
+    {
+      "id": "map_cache",
+      "label": "Map Generation Cache",
+      "file_type": "code"
+    },
+    {
+      "id": "test_bot",
+      "label": "test_bot.py",
+      "file_type": "code"
+    },
+    {
+      "id": "test_data",
+      "label": "test_data.py",
+      "file_type": "code"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config_py",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "config_py",
+      "target": "dotenv",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "asyncio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "contextlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "fastapi",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "fastapi_staticfiles",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "routers_webhook",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "services_water_quality",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "cienrayas_bot_main_lifespan",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_main_lifespan",
+      "target": "fastapi",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "cienrayas_bot_main_health",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "cienrayas_bot_main_ping",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_main_rationale_50",
+      "target": "cienrayas_bot_main_ping",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "sys",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "asyncio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "dotenv",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "services_weather",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "services_satellite",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "services_water_quality",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "services_llm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "core_semaphore",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "core_zone_analysis",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "cienrayas_bot_test_bot_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_test_bot_rationale_1",
+      "target": "test_bot_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "test_data_py",
+      "target": "asyncio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "test_data_py",
+      "target": "services_weather",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "test_data_py",
+      "target": "services_satellite",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "test_data_py",
+      "target": "services_water_quality",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "test_data_py",
+      "target": "services_map_generator",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "test_data_py",
+      "target": "core_semaphore",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "test_data_py",
+      "target": "core_zone_analysis",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "test_data_py",
+      "target": "cienrayas_bot_test_data_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_test_data_rationale_1",
+      "target": "test_data_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_py",
+      "target": "math",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_py",
+      "target": "core_knowledge_local_wind_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_local_wind_name",
+      "target": "core_knowledge_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_local_wind_name",
+      "target": "core_knowledge_py_str",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_local_wind_name",
+      "target": "core_knowledge_py_bool",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_py",
+      "target": "core_knowledge_interpret_water_color",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_interpret_water_color",
+      "target": "core_knowledge_py_float",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_interpret_water_color",
+      "target": "core_knowledge_py_float",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_interpret_water_color",
+      "target": "core_knowledge_py_float",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_interpret_water_color",
+      "target": "core_knowledge_py_str",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_py",
+      "target": "core_knowledge_get_lunar_phase",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_py",
+      "target": "core_knowledge_get_fishing_context",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L324",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_get_fishing_context",
+      "target": "core_knowledge_py_str",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L324",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_get_fishing_context",
+      "target": "core_knowledge_get_lunar_phase",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L332",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_rationale_1",
+      "target": "core_knowledge_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_rationale_81",
+      "target": "core_knowledge_local_wind_name",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_rationale_102",
+      "target": "core_knowledge_interpret_water_color",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_rationale_124",
+      "target": "core_knowledge_get_lunar_phase",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "core_knowledge_rationale_325",
+      "target": "core_knowledge_get_fishing_context",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/knowledge.py",
+      "source_location": "L325",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_py",
+      "target": "core_knowledge",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_py",
+      "target": "core_zone_analysis",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_py",
+      "target": "core_prompts_wq_plain",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_wq_plain",
+      "target": "core_prompts_py_str",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_py",
+      "target": "core_prompts_zone_ranking_text",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_zone_ranking_text",
+      "target": "core_prompts_py_str",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_py",
+      "target": "core_prompts_build_fishing_prompt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_build_fishing_prompt",
+      "target": "core_prompts_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_build_fishing_prompt",
+      "target": "core_prompts_py_str",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_build_fishing_prompt",
+      "target": "core_prompts_zone_ranking_text",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_build_fishing_prompt",
+      "target": "core_prompts_wq_plain",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L161",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_rationale_35",
+      "target": "core_prompts_wq_plain",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "core_semaphore_py",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "core/semaphore.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_semaphore_py",
+      "target": "core_knowledge",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "core/semaphore.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "core_semaphore_py",
+      "target": "core_semaphore_semaphoreresult",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/semaphore.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "core_semaphore_py",
+      "target": "core_semaphore_evaluate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/semaphore.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "core_semaphore_evaluate",
+      "target": "core_semaphore_semaphoreresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/semaphore.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "core_semaphore_evaluate",
+      "target": "core_semaphore_semaphoreresult",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/semaphore.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_py",
+      "target": "core_state_is_duplicate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_is_duplicate",
+      "target": "core_state_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_is_duplicate",
+      "target": "core_state_py_bool",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_py",
+      "target": "core_state_purge_old_ids",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_py",
+      "target": "core_state_get_state",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_get_state",
+      "target": "core_state_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_py",
+      "target": "core_state_set_state",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_set_state",
+      "target": "core_state_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_py",
+      "target": "core_state_record_query",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_record_query",
+      "target": "core_state_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_py",
+      "target": "core_state_record_feedback",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_record_feedback",
+      "target": "core_state_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_record_feedback",
+      "target": "core_state_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_py",
+      "target": "core_state_is_awaiting_feedback",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_is_awaiting_feedback",
+      "target": "core_state_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_is_awaiting_feedback",
+      "target": "core_state_py_bool",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_py",
+      "target": "core_state_looks_like_new_query",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_looks_like_new_query",
+      "target": "core_state_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_looks_like_new_query",
+      "target": "core_state_py_bool",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_py",
+      "target": "core_state_looks_like_feedback",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_looks_like_feedback",
+      "target": "core_state_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_looks_like_feedback",
+      "target": "core_state_py_bool",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_is_duplicate",
+      "target": "core_state_purge_old_ids",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_record_query",
+      "target": "core_state_set_state",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_record_feedback",
+      "target": "core_state_get_state",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_record_feedback",
+      "target": "core_state_set_state",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_looks_like_feedback",
+      "target": "core_state_looks_like_new_query",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_rationale_1",
+      "target": "core_state_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_rationale_16",
+      "target": "core_state_is_duplicate",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_rationale_25",
+      "target": "core_state_purge_old_ids",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_rationale_68",
+      "target": "core_state_looks_like_new_query",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "core_state_rationale_74",
+      "target": "core_state_looks_like_feedback",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/state.py",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_py",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_py",
+      "target": "core_zone_analysis_zone",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_py",
+      "target": "core_zone_analysis_score_od",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_score_od",
+      "target": "core_zone_analysis_py_float",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_score_od",
+      "target": "core_zone_analysis_py_float",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_py",
+      "target": "core_zone_analysis_score_sst",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_score_sst",
+      "target": "core_zone_analysis_py_float",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_score_sst",
+      "target": "core_zone_analysis_py_float",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_py",
+      "target": "core_zone_analysis_score_chlorophyll",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_score_chlorophyll",
+      "target": "core_zone_analysis_py_float",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_score_chlorophyll",
+      "target": "core_zone_analysis_py_float",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_py",
+      "target": "core_zone_analysis_score_turbidity",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_score_turbidity",
+      "target": "core_zone_analysis_py_float",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_score_turbidity",
+      "target": "core_zone_analysis_py_float",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_py",
+      "target": "core_zone_analysis_score_ph",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_score_ph",
+      "target": "core_zone_analysis_py_float",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_score_ph",
+      "target": "core_zone_analysis_py_float",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_py",
+      "target": "core_zone_analysis_score_salinity_for_zone",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_score_salinity_for_zone",
+      "target": "core_zone_analysis_py_float",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_score_salinity_for_zone",
+      "target": "core_zone_analysis_zone",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_score_salinity_for_zone",
+      "target": "core_zone_analysis_py_float",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_py",
+      "target": "core_zone_analysis_zone_ipp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L172",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_zone_ipp",
+      "target": "core_zone_analysis_zone",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L172",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_zone_ipp",
+      "target": "core_zone_analysis_py_float",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L172",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_py",
+      "target": "core_zone_analysis_recommend_zone",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L194",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_py",
+      "target": "core_zone_analysis_full_ranking",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L200",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_zone_ipp",
+      "target": "core_zone_analysis_score_od",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L182",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_zone_ipp",
+      "target": "core_zone_analysis_score_sst",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L183",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_zone_ipp",
+      "target": "core_zone_analysis_score_salinity_for_zone",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L184",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_zone_ipp",
+      "target": "core_zone_analysis_score_chlorophyll",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L185",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_zone_ipp",
+      "target": "core_zone_analysis_score_turbidity",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L186",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_zone_ipp",
+      "target": "core_zone_analysis_score_ph",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L187",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_recommend_zone",
+      "target": "core_zone_analysis_full_ranking",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_full_ranking",
+      "target": "core_zone_analysis_zone_ipp",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L204",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_rationale_1",
+      "target": "core_zone_analysis_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_rationale_91",
+      "target": "core_zone_analysis_score_od",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_rationale_102",
+      "target": "core_zone_analysis_score_sst",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_rationale_113",
+      "target": "core_zone_analysis_score_chlorophyll",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_rationale_124",
+      "target": "core_zone_analysis_score_turbidity",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_rationale_135",
+      "target": "core_zone_analysis_score_ph",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_rationale_146",
+      "target": "core_zone_analysis_score_salinity_for_zone",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_rationale_173",
+      "target": "core_zone_analysis_zone_ipp",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L173",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_rationale_195",
+      "target": "core_zone_analysis_recommend_zone",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L195",
+      "weight": 1.0
+    },
+    {
+      "source": "core_zone_analysis_rationale_201",
+      "target": "core_zone_analysis_full_ranking",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core/zone_analysis.py",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "asyncio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "fastapi",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "fastapi_responses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "services_whatsapp",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "services_weather",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "services_satellite",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "services_water_quality",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "services_map_generator",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "services_llm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "core_semaphore",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "core_zone_analysis",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "core_state",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "routers_webhook_handle_fishing_query",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_fishing_query",
+      "target": "routers_webhook_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_fishing_query",
+      "target": "routers_webhook_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "routers_webhook_handle_feedback",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_feedback",
+      "target": "routers_webhook_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_feedback",
+      "target": "routers_webhook_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "routers_webhook_verify_webhook",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_verify_webhook",
+      "target": "routers_webhook_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_verify_webhook",
+      "target": "routers_webhook_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_verify_webhook",
+      "target": "routers_webhook_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "routers_webhook_receive_webhook",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_receive_webhook",
+      "target": "backgroundtasks",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_receive_webhook",
+      "target": "request",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_fishing_query",
+      "target": "routers_webhook_py_str",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_rationale_1",
+      "target": "routers_webhook_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_rationale_138",
+      "target": "routers_webhook_verify_webhook",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L138",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_rationale_146",
+      "target": "routers_webhook_receive_webhook",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_py",
+      "target": "asyncio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_py",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_py",
+      "target": "time",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_py",
+      "target": "groq",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_py",
+      "target": "config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_py",
+      "target": "core_prompts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_py",
+      "target": "services_llm_get_semaphore",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_get_semaphore",
+      "target": "semaphore",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_py",
+      "target": "services_llm_call_groq",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_call_groq",
+      "target": "services_llm_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_call_groq",
+      "target": "services_llm_py_str",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_py",
+      "target": "services_llm_generate_fishing_response",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_generate_fishing_response",
+      "target": "services_llm_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_generate_fishing_response",
+      "target": "services_llm_py_str",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_py",
+      "target": "services_llm_generate_feedback_ack",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_generate_feedback_ack",
+      "target": "services_llm_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_generate_feedback_ack",
+      "target": "services_llm_py_str",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_get_semaphore",
+      "target": "semaphore",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_call_groq",
+      "target": "services_llm_py_str",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_generate_fishing_response",
+      "target": "services_llm_get_semaphore",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_generate_feedback_ack",
+      "target": "services_llm_get_semaphore",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "threading",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "uuid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "numpy",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "matplotlib",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "matplotlib_pyplot",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "matplotlib_patches",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "matplotlib_patheffects",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "matplotlib_patches",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "matplotlib_colors",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "matplotlib_ticker",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "services_map_generator_ipp_color",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L175",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_ipp_color",
+      "target": "services_map_generator_py_float",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L175",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_ipp_color",
+      "target": "services_map_generator_py_str",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L175",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "services_map_generator_north_arrow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L182",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "services_map_generator_scale_bar",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "services_map_generator_cache_hit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L213",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_cache_hit",
+      "target": "services_map_generator_py_str",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L213",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "services_map_generator_generate_map",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_generate_map",
+      "target": "services_map_generator_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_generate_map",
+      "target": "services_map_generator_py_float",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_generate_map",
+      "target": "services_map_generator_py_float",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_generate_map",
+      "target": "services_map_generator_py_str",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "services_map_generator_render_map",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L249",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_render_map",
+      "target": "services_map_generator_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L249",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_render_map",
+      "target": "services_map_generator_py_float",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L249",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_render_map",
+      "target": "services_map_generator_py_float",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L249",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_render_map",
+      "target": "services_map_generator_py_str",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L249",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "services_map_generator_basemap_or_fallback",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L597",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "services_map_generator_north_arrow_v2",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L631",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_py",
+      "target": "services_map_generator_generar_mapa",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L646",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_generar_mapa",
+      "target": "services_map_generator_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L646",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_generar_mapa",
+      "target": "services_map_generator_py_str",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L646",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_generate_map",
+      "target": "services_map_generator_cache_hit",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L234",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_generate_map",
+      "target": "services_map_generator_render_map",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L243",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_render_map",
+      "target": "services_map_generator_ipp_color",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L328",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_render_map",
+      "target": "services_map_generator_north_arrow",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L437",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_render_map",
+      "target": "services_map_generator_scale_bar",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L438",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_render_map",
+      "target": "services_map_generator_py_str",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L578",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_generar_mapa",
+      "target": "services_map_generator_basemap_or_fallback",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L679",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_generar_mapa",
+      "target": "services_map_generator_py_float",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L688",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_generar_mapa",
+      "target": "services_map_generator_py_str",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L697",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_generar_mapa",
+      "target": "services_map_generator_north_arrow_v2",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L704",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_rationale_1",
+      "target": "services_map_generator_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_rationale_214",
+      "target": "services_map_generator_cache_hit",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L214",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_rationale_256",
+      "target": "services_map_generator_render_map",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L256",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_rationale_598",
+      "target": "services_map_generator_basemap_or_fallback",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L598",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_rationale_632",
+      "target": "services_map_generator_north_arrow_v2",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L632",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_rationale_647",
+      "target": "services_map_generator_generar_mapa",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/map_generator.py",
+      "source_location": "L647",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_py",
+      "target": "httpx",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_py",
+      "target": "config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_py",
+      "target": "services_satellite_erddap_average",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_erddap_average",
+      "target": "services_satellite_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_erddap_average",
+      "target": "services_satellite_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_erddap_average",
+      "target": "services_satellite_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_erddap_average",
+      "target": "services_satellite_py_float",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_py",
+      "target": "services_satellite_get_sst",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_get_sst",
+      "target": "services_satellite_py_float",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_get_sst",
+      "target": "services_satellite_py_str",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_py",
+      "target": "services_satellite_get_chlorophyll",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_get_chlorophyll",
+      "target": "services_satellite_py_float",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_get_chlorophyll",
+      "target": "services_satellite_py_str",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_py",
+      "target": "services_satellite_get_satellite_data",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_get_sst",
+      "target": "services_satellite_erddap_average",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_get_chlorophyll",
+      "target": "services_satellite_erddap_average",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_get_satellite_data",
+      "target": "services_satellite_get_sst",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L84",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_get_satellite_data",
+      "target": "services_satellite_get_chlorophyll",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L84",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_rationale_1",
+      "target": "services_satellite_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_rationale_41",
+      "target": "services_satellite_get_sst",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "services_satellite_rationale_57",
+      "target": "services_satellite_get_chlorophyll",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/satellite.py",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_py",
+      "target": "httpx",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_py",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_py",
+      "target": "asyncio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_py",
+      "target": "services_water_quality_seasonal_values",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_seasonal_values",
+      "target": "int",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_py",
+      "target": "services_water_quality_try_ideam_dhime",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_try_ideam_dhime",
+      "target": "services_water_quality_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_py",
+      "target": "services_water_quality_season_label",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_season_label",
+      "target": "int",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_season_label",
+      "target": "services_water_quality_py_str",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_py",
+      "target": "services_water_quality_fetch_from_ideam",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_py",
+      "target": "services_water_quality_refresh_cache",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L138",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_py",
+      "target": "services_water_quality_get_water_quality",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_py",
+      "target": "services_water_quality_daily_refresh_loop",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L173",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_try_ideam_dhime",
+      "target": "services_water_quality_season_label",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_fetch_from_ideam",
+      "target": "services_water_quality_try_ideam_dhime",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_refresh_cache",
+      "target": "services_water_quality_fetch_from_ideam",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_refresh_cache",
+      "target": "services_water_quality_seasonal_values",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L148",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_get_water_quality",
+      "target": "services_water_quality_refresh_cache",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L170",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_daily_refresh_loop",
+      "target": "services_water_quality_refresh_cache",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L182",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_rationale_1",
+      "target": "services_water_quality_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_rationale_76",
+      "target": "services_water_quality_try_ideam_dhime",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_rationale_129",
+      "target": "services_water_quality_fetch_from_ideam",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L129",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_rationale_139",
+      "target": "services_water_quality_refresh_cache",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L139",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_rationale_159",
+      "target": "services_water_quality_get_water_quality",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L159",
+      "weight": 1.0
+    },
+    {
+      "source": "services_water_quality_rationale_174",
+      "target": "services_water_quality_daily_refresh_loop",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/water_quality.py",
+      "source_location": "L174",
+      "weight": 1.0
+    },
+    {
+      "source": "services_weather_py",
+      "target": "asyncio",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/weather.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "services_weather_py",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/weather.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "services_weather_py",
+      "target": "httpx",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/weather.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "services_weather_py",
+      "target": "config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/weather.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "services_weather_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/weather.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "services_weather_py",
+      "target": "services_weather_direction_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/weather.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "services_weather_direction_name",
+      "target": "services_weather_py_float",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/weather.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "services_weather_direction_name",
+      "target": "services_weather_py_str",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/weather.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "services_weather_py",
+      "target": "services_weather_get_weather",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/weather.py",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "services_weather_get_weather",
+      "target": "services_weather_py_float",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/weather.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "services_weather_get_weather",
+      "target": "services_weather_direction_name",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/weather.py",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_py",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_py",
+      "target": "httpx",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_py",
+      "target": "config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_py",
+      "target": "services_whatsapp_send_text",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_send_text",
+      "target": "services_whatsapp_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_send_text",
+      "target": "services_whatsapp_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_py",
+      "target": "services_whatsapp_send_image",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_send_image",
+      "target": "services_whatsapp_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_send_image",
+      "target": "services_whatsapp_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_send_image",
+      "target": "services_whatsapp_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_py",
+      "target": "services_whatsapp_send",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_send",
+      "target": "services_whatsapp_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_send",
+      "target": "services_whatsapp_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_send",
+      "target": "services_whatsapp_py_str",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_send",
+      "target": "services_whatsapp_send_image",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "services_whatsapp_send",
+      "target": "services_whatsapp_send_text",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/whatsapp.py",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "services_water_quality_refresh_cache",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "services_water_quality_daily_refresh_loop",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "services_weather_get_weather",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "services_satellite_get_satellite_data",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "services_water_quality_get_water_quality",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "services_llm_generate_fishing_response",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "core_semaphore_evaluate",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "core_zone_analysis_recommend_zone",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "test_bot_py",
+      "target": "core_zone_analysis_full_ranking",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "test_data_py",
+      "target": "services_weather_get_weather",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "test_data_py",
+      "target": "services_satellite_get_satellite_data",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "test_data_py",
+      "target": "services_water_quality_get_water_quality",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "test_data_py",
+      "target": "services_map_generator_generate_map",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "test_data_py",
+      "target": "core_semaphore_evaluate",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "test_data_py",
+      "target": "core_zone_analysis_full_ranking",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_py",
+      "target": "core_knowledge_get_fishing_context",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_py",
+      "target": "core_knowledge_local_wind_name",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_py",
+      "target": "core_knowledge_get_lunar_phase",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_py",
+      "target": "core_knowledge_interpret_water_color",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_py",
+      "target": "core_zone_analysis_full_ranking",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "core_semaphore_py",
+      "target": "core_knowledge_local_wind_name",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "core/semaphore.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "core_semaphore_py",
+      "target": "core_knowledge_get_lunar_phase",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "core/semaphore.py",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "services_whatsapp_send",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "services_weather_get_weather",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "services_satellite_get_satellite_data",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "services_water_quality_get_water_quality",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "services_map_generator_generate_map",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "services_llm_generate_fishing_response",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "services_llm_generate_feedback_ack",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "core_semaphore_evaluate",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "core_zone_analysis_recommend_zone",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "core_zone_analysis_full_ranking",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "core_state_record_query",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "core_state_record_feedback",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "core_state_is_awaiting_feedback",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "core_state_looks_like_feedback",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_py",
+      "target": "core_state_is_duplicate",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_py",
+      "target": "core_prompts_build_fishing_prompt",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_test_bot_main",
+      "target": "services_weather_get_weather",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_test_bot_main",
+      "target": "services_satellite_get_satellite_data",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_test_bot_main",
+      "target": "services_water_quality_get_water_quality",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_test_bot_main",
+      "target": "core_semaphore_evaluate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_test_bot_main",
+      "target": "core_zone_analysis_recommend_zone",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_test_bot_main",
+      "target": "services_llm_generate_fishing_response",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_bot.py",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_test_data_main",
+      "target": "services_weather_get_weather",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_test_data_main",
+      "target": "services_satellite_get_satellite_data",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_test_data_main",
+      "target": "services_water_quality_get_water_quality",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_test_data_main",
+      "target": "core_zone_analysis_full_ranking",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_test_data_main",
+      "target": "core_semaphore_evaluate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_test_data_main",
+      "target": "services_map_generator_generate_map",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_data.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_zone_ranking_text",
+      "target": "core_zone_analysis_full_ranking",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_build_fishing_prompt",
+      "target": "core_knowledge_local_wind_name",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_build_fishing_prompt",
+      "target": "core_knowledge_interpret_water_color",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_build_fishing_prompt",
+      "target": "core_knowledge_get_lunar_phase",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_build_fishing_prompt",
+      "target": "core_zone_analysis_full_ranking",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L171",
+      "weight": 1.0
+    },
+    {
+      "source": "core_prompts_build_fishing_prompt",
+      "target": "core_knowledge_get_fishing_context",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/prompts.py",
+      "source_location": "L200",
+      "weight": 1.0
+    },
+    {
+      "source": "core_semaphore_evaluate",
+      "target": "core_knowledge_local_wind_name",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/semaphore.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "core_semaphore_evaluate",
+      "target": "core_knowledge_get_lunar_phase",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/semaphore.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_fishing_query",
+      "target": "services_weather_get_weather",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_fishing_query",
+      "target": "services_satellite_get_satellite_data",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_fishing_query",
+      "target": "services_water_quality_get_water_quality",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_fishing_query",
+      "target": "services_whatsapp_send",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_fishing_query",
+      "target": "core_semaphore_evaluate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_fishing_query",
+      "target": "core_zone_analysis_full_ranking",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_fishing_query",
+      "target": "core_state_record_query",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_fishing_query",
+      "target": "services_llm_generate_fishing_response",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_feedback",
+      "target": "core_state_record_feedback",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_feedback",
+      "target": "services_llm_generate_feedback_ack",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L122",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_handle_feedback",
+      "target": "services_whatsapp_send",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routers/webhook.py",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "services_llm_generate_fishing_response",
+      "target": "core_prompts_build_fishing_prompt",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/llm.py",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_main_lifespan",
+      "target": "services_water_quality_refresh_cache",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot_main_lifespan",
+      "target": "services_water_quality_daily_refresh_loop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "main.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_receive_webhook",
+      "target": "core_state_is_duplicate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routers/webhook.py",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_receive_webhook",
+      "target": "core_state_is_awaiting_feedback",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routers/webhook.py",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "routers_webhook_receive_webhook",
+      "target": "core_state_looks_like_feedback",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routers/webhook.py",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "services_map_generator_ipp_color",
+      "target": "int",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "services/map_generator.py",
+      "source_location": "L178",
+      "weight": 1.0
+    },
+    {
+      "source": "services_weather_get_weather",
+      "target": "int",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "services/weather.py",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "cienrayas_bot",
+      "target": "fastapi_app",
+      "relation": "is_built_with",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "fastapi_app",
+      "target": "routers_module",
+      "relation": "includes",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "fastapi_app",
+      "target": "core_module",
+      "relation": "depends_on",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "fastapi_app",
+      "target": "services_module",
+      "relation": "depends_on",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "routers_module",
+      "target": "webhook_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "webhook_py",
+      "target": "services_module",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "webhook_py",
+      "target": "core_module",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "webhook_py",
+      "target": "meta_whatsapp_api",
+      "relation": "integrates_with",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "core_module",
+      "target": "knowledge_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "core_module",
+      "target": "prompts_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "core_module",
+      "target": "semaphore_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "core_module",
+      "target": "zone_analysis_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "core_module",
+      "target": "state_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "services_module",
+      "target": "llm_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "services_module",
+      "target": "weather_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "services_module",
+      "target": "satellite_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "services_module",
+      "target": "water_quality_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "services_module",
+      "target": "map_generator_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "services_module",
+      "target": "whatsapp_py",
+      "relation": "contains",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "llm_py",
+      "target": "groq_api",
+      "relation": "integrates_with",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "llm_py",
+      "target": "prompts_py",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "llm_py",
+      "target": "llm_cache",
+      "relation": "implements",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "weather_py",
+      "target": "wttr_in_api",
+      "relation": "integrates_with",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "satellite_py",
+      "target": "nasa_erddap",
+      "relation": "integrates_with",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "water_quality_py",
+      "target": "ideam_dhime",
+      "relation": "integrates_with",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "whatsapp_py",
+      "target": "meta_whatsapp_api",
+      "relation": "integrates_with",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "semaphore_py",
+      "target": "knowledge_py",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "semaphore_py",
+      "target": "semaphore_signal",
+      "relation": "evaluates_to",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "zone_analysis_py",
+      "target": "fishing_zones",
+      "relation": "defines",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "zone_analysis_py",
+      "target": "ipp_index",
+      "relation": "calculates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "zone_analysis_py",
+      "target": "water_quality_data",
+      "relation": "uses",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "zone_analysis_py",
+      "target": "satellite_data",
+      "relation": "uses",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "prompts_py",
+      "target": "knowledge_py",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "prompts_py",
+      "target": "zone_analysis_py",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "knowledge_py",
+      "target": "local_wind_names",
+      "relation": "defines",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "knowledge_py",
+      "target": "water_color_signals",
+      "relation": "defines",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "knowledge_py",
+      "target": "fishing_methods",
+      "relation": "defines",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "knowledge_py",
+      "target": "fish_species",
+      "relation": "defines",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "knowledge_py",
+      "target": "monitoring_points",
+      "relation": "defines",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "knowledge_py",
+      "target": "sr_adelmo",
+      "relation": "sourced_from",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "knowledge_py",
+      "target": "cienaga_location",
+      "relation": "documents",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "state_py",
+      "target": "conversation_state",
+      "relation": "implements",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "state_py",
+      "target": "feedback_loop",
+      "relation": "manages",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "webhook_py",
+      "target": "conversation_state",
+      "relation": "uses",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "webhook_py",
+      "target": "semaphore_signal",
+      "relation": "evaluates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "webhook_py",
+      "target": "ipp_index",
+      "relation": "calculates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "fisher_user",
+      "target": "webhook_py",
+      "relation": "sends_message_to",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "webhook_py",
+      "target": "fisher_user",
+      "relation": "sends_response_to",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "fisher_user",
+      "target": "cienaga_location",
+      "relation": "works_in",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "map_generator_py",
+      "target": "map_cache",
+      "relation": "implements",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "map_generator_py",
+      "target": "cienaga_location",
+      "relation": "generates_map_of",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "map_generator_py",
+      "target": "fishing_zones",
+      "relation": "visualizes",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "weather_data",
+      "target": "semaphore_signal",
+      "relation": "influences",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "satellite_data",
+      "target": "zone_analysis_py",
+      "relation": "input_to",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "water_quality_data",
+      "target": "zone_analysis_py",
+      "relation": "input_to",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "test_bot",
+      "target": "cienrayas_bot",
+      "relation": "tests",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "test_data",
+      "target": "services_module",
+      "relation": "tests",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "config_module",
+      "target": "cienaga_location",
+      "relation": "configures_coordinates_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "config_module",
+      "target": "groq_api",
+      "relation": "stores_credentials_for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "config_module",
+      "target": "meta_whatsapp_api",
+      "relation": "stores_credentials_for",
+      "confidence": "EXTRACTED"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "data_pipeline",
+      "label": "Real-Time Data Collection Pipeline",
+      "nodes": [
+        "weather_py",
+        "satellite_py",
+        "water_quality_py",
+        "webhook_py"
+      ],
+      "relation": "parallel_data_aggregation"
+    },
+    {
+      "id": "safety_evaluation_flow",
+      "label": "Safety Evaluation Flow",
+      "nodes": [
+        "semaphore_py",
+        "weather_data",
+        "water_quality_data",
+        "semaphore_signal"
+      ],
+      "relation": "safety_assessment_process"
+    },
+    {
+      "id": "fishing_recommendation_flow",
+      "label": "Fishing Zone Recommendation",
+      "nodes": [
+        "zone_analysis_py",
+        "satellite_data",
+        "water_quality_data",
+        "ipp_index",
+        "fishing_zones"
+      ],
+      "relation": "multivariable_zone_ranking"
+    },
+    {
+      "id": "llm_response_generation",
+      "label": "AI Response Generation with Caching",
+      "nodes": [
+        "llm_py",
+        "prompts_py",
+        "groq_api",
+        "llm_cache"
+      ],
+      "relation": "distributed_llm_inference"
+    },
+    {
+      "id": "fisher_interaction_loop",
+      "label": "Fisher Conversation Interaction Loop",
+      "nodes": [
+        "fisher_user",
+        "webhook_py",
+        "conversation_state",
+        "feedback_loop",
+        "meta_whatsapp_api"
+      ],
+      "relation": "bidirectional_messaging_cycle"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

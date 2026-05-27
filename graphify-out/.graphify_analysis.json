@@ -1,0 +1,335 @@
+{
+  "communities": {
+    "0": [
+      "cienaga_location",
+      "cienrayas_bot",
+      "config_module",
+      "conversation_state",
+      "core_module",
+      "fastapi_app",
+      "feedback_loop",
+      "fish_species",
+      "fisher_user",
+      "fishing_methods",
+      "fishing_zones",
+      "groq_api",
+      "ideam_dhime",
+      "ipp_index",
+      "knowledge_py",
+      "llm_cache",
+      "llm_py",
+      "local_wind_names",
+      "map_cache",
+      "map_generator_py",
+      "meta_whatsapp_api",
+      "monitoring_points",
+      "nasa_erddap",
+      "prompts_py",
+      "routers_module",
+      "satellite_data",
+      "satellite_py",
+      "semaphore_py",
+      "semaphore_signal",
+      "services_module",
+      "sr_adelmo",
+      "state_py",
+      "test_bot",
+      "test_data",
+      "water_color_signals",
+      "water_quality_data",
+      "water_quality_py",
+      "weather_data",
+      "weather_py",
+      "webhook_py",
+      "whatsapp_py",
+      "wttr_in_api",
+      "zone_analysis_py"
+    ],
+    "1": [
+      "backgroundtasks",
+      "core_state_get_state",
+      "core_state_is_awaiting_feedback",
+      "core_state_is_duplicate",
+      "core_state_looks_like_feedback",
+      "core_state_looks_like_new_query",
+      "core_state_purge_old_ids",
+      "core_state_py",
+      "core_state_py_bool",
+      "core_state_py_str",
+      "core_state_rationale_1",
+      "core_state_rationale_16",
+      "core_state_rationale_25",
+      "core_state_rationale_68",
+      "core_state_rationale_74",
+      "core_state_record_feedback",
+      "core_state_record_query",
+      "core_state_set_state",
+      "request",
+      "routers_webhook_handle_feedback",
+      "routers_webhook_handle_fishing_query",
+      "routers_webhook_py",
+      "routers_webhook_py_str",
+      "routers_webhook_rationale_1",
+      "routers_webhook_rationale_138",
+      "routers_webhook_rationale_146",
+      "routers_webhook_receive_webhook",
+      "routers_webhook_verify_webhook"
+    ],
+    "2": [
+      "cienrayas_bot_test_bot_main",
+      "cienrayas_bot_test_bot_rationale_1",
+      "cienrayas_bot_test_data_main",
+      "cienrayas_bot_test_data_rationale_1",
+      "core_zone_analysis_rationale_195",
+      "core_zone_analysis_recommend_zone",
+      "services_satellite_erddap_average",
+      "services_satellite_get_chlorophyll",
+      "services_satellite_get_satellite_data",
+      "services_satellite_get_sst",
+      "services_satellite_py",
+      "services_satellite_py_float",
+      "services_satellite_py_str",
+      "services_satellite_rationale_1",
+      "services_satellite_rationale_41",
+      "services_satellite_rationale_57",
+      "services_water_quality_get_water_quality",
+      "services_water_quality_rationale_159",
+      "services_weather_direction_name",
+      "services_weather_get_weather",
+      "services_weather_py",
+      "services_weather_py_float",
+      "services_weather_py_str",
+      "test_bot_py",
+      "test_data_py"
+    ],
+    "3": [
+      "core_knowledge_get_fishing_context",
+      "core_knowledge_get_lunar_phase",
+      "core_knowledge_interpret_water_color",
+      "core_knowledge_local_wind_name",
+      "core_knowledge_py",
+      "core_knowledge_py_bool",
+      "core_knowledge_py_float",
+      "core_knowledge_py_str",
+      "core_knowledge_rationale_1",
+      "core_knowledge_rationale_102",
+      "core_knowledge_rationale_124",
+      "core_knowledge_rationale_325",
+      "core_knowledge_rationale_81",
+      "core_prompts_build_fishing_prompt",
+      "core_prompts_py",
+      "core_prompts_py_str",
+      "core_prompts_rationale_35",
+      "core_prompts_wq_plain",
+      "core_prompts_zone_ranking_text",
+      "core_semaphore_evaluate",
+      "core_semaphore_py",
+      "core_semaphore_semaphoreresult",
+      "core_zone_analysis_full_ranking",
+      "core_zone_analysis_rationale_201"
+    ],
+    "4": [
+      "cienrayas_bot_main_health",
+      "cienrayas_bot_main_lifespan",
+      "cienrayas_bot_main_ping",
+      "cienrayas_bot_main_rationale_50",
+      "fastapi",
+      "int",
+      "main_py",
+      "services_water_quality_daily_refresh_loop",
+      "services_water_quality_fetch_from_ideam",
+      "services_water_quality_py",
+      "services_water_quality_py_str",
+      "services_water_quality_rationale_1",
+      "services_water_quality_rationale_129",
+      "services_water_quality_rationale_139",
+      "services_water_quality_rationale_174",
+      "services_water_quality_rationale_76",
+      "services_water_quality_refresh_cache",
+      "services_water_quality_season_label",
+      "services_water_quality_seasonal_values",
+      "services_water_quality_try_ideam_dhime"
+    ],
+    "5": [
+      "core_zone_analysis_py",
+      "core_zone_analysis_py_float",
+      "core_zone_analysis_rationale_1",
+      "core_zone_analysis_rationale_102",
+      "core_zone_analysis_rationale_113",
+      "core_zone_analysis_rationale_124",
+      "core_zone_analysis_rationale_135",
+      "core_zone_analysis_rationale_146",
+      "core_zone_analysis_rationale_173",
+      "core_zone_analysis_rationale_91",
+      "core_zone_analysis_score_chlorophyll",
+      "core_zone_analysis_score_od",
+      "core_zone_analysis_score_ph",
+      "core_zone_analysis_score_salinity_for_zone",
+      "core_zone_analysis_score_sst",
+      "core_zone_analysis_score_turbidity",
+      "core_zone_analysis_zone",
+      "core_zone_analysis_zone_ipp"
+    ],
+    "6": [
+      "services_map_generator_basemap_or_fallback",
+      "services_map_generator_cache_hit",
+      "services_map_generator_generar_mapa",
+      "services_map_generator_generate_map",
+      "services_map_generator_ipp_color",
+      "services_map_generator_north_arrow",
+      "services_map_generator_north_arrow_v2",
+      "services_map_generator_py",
+      "services_map_generator_py_float",
+      "services_map_generator_py_str",
+      "services_map_generator_rationale_1",
+      "services_map_generator_rationale_214",
+      "services_map_generator_rationale_256",
+      "services_map_generator_rationale_598",
+      "services_map_generator_rationale_632",
+      "services_map_generator_rationale_647",
+      "services_map_generator_render_map",
+      "services_map_generator_scale_bar"
+    ],
+    "7": [
+      "semaphore",
+      "services_llm_call_groq",
+      "services_llm_generate_feedback_ack",
+      "services_llm_generate_fishing_response",
+      "services_llm_get_semaphore",
+      "services_llm_py",
+      "services_llm_py_str"
+    ],
+    "8": [
+      "services_whatsapp_py",
+      "services_whatsapp_py_str",
+      "services_whatsapp_send",
+      "services_whatsapp_send_image",
+      "services_whatsapp_send_text"
+    ],
+    "9": [
+      "config_py"
+    ],
+    "10": [
+      "core_init_py"
+    ],
+    "11": [
+      "routers_init_py"
+    ],
+    "12": [
+      "services_init_py"
+    ],
+    "13": [
+      "fishing_context"
+    ]
+  },
+  "cohesion": {},
+  "god_nodes": [
+    {
+      "id": "core_zone_analysis_full_ranking",
+      "label": "full_ranking()",
+      "degree": 12
+    },
+    {
+      "id": "core_prompts_build_fishing_prompt",
+      "label": "build_fishing_prompt()",
+      "degree": 11
+    },
+    {
+      "id": "core_zone_analysis_zone_ipp",
+      "label": "_zone_ipp()",
+      "degree": 11
+    },
+    {
+      "id": "core_semaphore_evaluate",
+      "label": "evaluate()",
+      "degree": 10
+    },
+    {
+      "id": "routers_webhook_handle_fishing_query",
+      "label": "_handle_fishing_query()",
+      "degree": 10
+    },
+    {
+      "id": "services_weather_get_weather",
+      "label": "get_weather()",
+      "degree": 10
+    },
+    {
+      "id": "services_satellite_get_satellite_data",
+      "label": "get_satellite_data()",
+      "degree": 9
+    },
+    {
+      "id": "services_water_quality_get_water_quality",
+      "label": "get_water_quality()",
+      "degree": 9
+    },
+    {
+      "id": "core_knowledge_local_wind_name",
+      "label": "local_wind_name()",
+      "degree": 8
+    },
+    {
+      "id": "core_state_py_str",
+      "label": "str",
+      "degree": 8
+    }
+  ],
+  "surprises": [
+    {
+      "source": "main()",
+      "target": "evaluate()",
+      "source_files": [
+        "test_bot.py",
+        "core/semaphore.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "main()",
+      "target": "generate_fishing_response()",
+      "source_files": [
+        "test_bot.py",
+        "services/llm.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "main()",
+      "target": "full_ranking()",
+      "source_files": [
+        "test_data.py",
+        "core/zone_analysis.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "main()",
+      "target": "evaluate()",
+      "source_files": [
+        "test_data.py",
+        "core/semaphore.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "main()",
+      "target": "generate_map()",
+      "source_files": [
+        "test_data.py",
+        "services/map_generator.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "files": {
+    "code": [
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\config.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\main.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\test_bot.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\test_data.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\core\\knowledge.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\core\\prompts.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\core\\semaphore.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\core\\state.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\core\\zone_analysis.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\core\\__init__.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\routers\\webhook.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\routers\\__init__.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\services\\llm.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\services\\map_generator.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\services\\satellite.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\services\\water_quality.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\services\\weather.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\services\\whatsapp.py",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\services\\__init__.py"
+    ],
+    "document": [
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\README.md",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\render.yaml",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\requirements.txt",
+      "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\runtime.txt"
+    ],
+    "paper": [],
+    "image": [],
+    "video": []
+  },
+  "total_files": 23,
+  "total_words": 12069,
+  "needs_graph": false,
+  "warning": "Corpus is ~12,069 words - fits in a single context window. You may not need a graph.",
+  "skipped_sensitive": [
+    "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot\\.env.example"
+  ],
+  "graphifyignore_patterns": 11,
+  "scan_root": "A:\\Unversidad\\ALUNA_IA\\CienRayas_Working\\cienrayas-bot"
+}
