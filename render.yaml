@@ -4,7 +4,7 @@ services:
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
-    plan: free
+    plan: starter  # free duerme tras 15 min — para la demo usar starter ($7/mes) o superior
     envVars:
       - key: GROQ_API_KEY
         sync: false                    # Se configura manualmente en Render

@@ -2,6 +2,7 @@
 Genera el mapa PNG de la Ciénaga Grande de Santa Marta.
 Estilo cartografía natural (Natural Earth / QGIS) — matplotlib sin tiles.
 """
+import threading
 import uuid
 import numpy as np
 import matplotlib
@@ -15,6 +16,10 @@ from matplotlib.ticker import MultipleLocator
 from pathlib import Path
 from datetime import datetime
 from config import MEDIA_DIR
+
+# Un solo thread genera el mapa a la vez — evita que 50 usuarios concurrentes
+# lancen 50 generaciones matplotlib simultáneas (thundering herd)
+_map_generation_lock = threading.Lock()
 
 # ---------------------------------------------------------------------------
 # Geografía — polígono Ciénaga Grande (lon, lat)
@@ -200,6 +205,22 @@ def _scale_bar(ax, lon_left=-74.88, lat_bot=10.44, length_deg=0.18):
             path_effects=[pe.withStroke(linewidth=1.5, foreground=_BG)], zorder=20)
 
 
+_map_cache_filename: str | None = None
+_map_cache_ts: datetime | None = None
+_MAP_CACHE_TTL_MINUTES = 10
+
+
+def _cache_hit() -> str | None:
+    """Retorna el filename cacheado si sigue vigente, o None."""
+    if _map_cache_filename is not None and _map_cache_ts is not None:
+        age = datetime.now() - _map_cache_ts
+        if age.total_seconds() < _MAP_CACHE_TTL_MINUTES * 60:
+            cached_path = Path(MEDIA_DIR) / _map_cache_filename
+            if cached_path.exists():
+                return _map_cache_filename
+    return None
+
+
 def generate_map(
     semaphore_color: str,
     sst: float,
@@ -207,9 +228,36 @@ def generate_map(
     water_quality: dict | None = None,
     zone_ranking: list | None = None,
 ) -> str:
+    global _map_cache_filename, _map_cache_ts
+
+    # Fast path: sin lock para no bloquear
+    hit = _cache_hit()
+    if hit:
+        return hit
+
+    with _map_generation_lock:
+        # Re-check dentro del lock: otro thread puede haber generado mientras esperábamos
+        hit = _cache_hit()
+        if hit:
+            return hit
+        filename = _render_map(semaphore_color, sst, chlorophyll, water_quality, zone_ranking)
+        _map_cache_filename = filename
+        _map_cache_ts = datetime.now()
+        return filename
+
+
+def _render_map(
+    semaphore_color: str,
+    sst: float,
+    chlorophyll: float,
+    water_quality: dict | None = None,
+    zone_ranking: list | None = None,
+) -> str:
+    """Genera el PNG del mapa sin tocar el caché — llamar solo desde dentro del lock."""
     sem_color = _SEMAPHORE_COLORS.get(semaphore_color, _SEMAPHORE_COLORS["verde"])
 
     fig = plt.figure(figsize=(8, 10.2), facecolor=_BG)
+
 
     # Mapa principal — el panel ocupa 30% abajo
     ax = fig.add_axes([0.05, 0.32, 0.90, 0.655])
@@ -530,7 +578,9 @@ def generate_map(
     plt.savefig(str(filepath), dpi=165, bbox_inches="tight",
                 facecolor=fig.get_facecolor())
     plt.close(fig)
+
     return filename
+
 
 
 # ─────────────────────────────────────────────────────────────────────────────

@@ -66,13 +66,30 @@ async def get_chlorophyll() -> tuple[float, str]:
     return 4.5, "valor histórico estacional"
 
 
+_satellite_cache: dict | None = None
+_satellite_cache_ts: datetime | None = None
+_CACHE_TTL_HOURS = 6
+
+
 async def get_satellite_data() -> dict:
+    global _satellite_cache, _satellite_cache_ts
+
+    if _satellite_cache is not None and _satellite_cache_ts is not None:
+        age = datetime.now(timezone.utc) - _satellite_cache_ts
+        if age.total_seconds() < _CACHE_TTL_HOURS * 3600:
+            return _satellite_cache
+
     # Ejecutar en paralelo — no hay dependencia entre SST y clorofila
     import asyncio
     (sst, sst_src), (chl, chl_src) = await asyncio.gather(get_sst(), get_chlorophyll())
-    return {
+    result = {
         "sst": sst,
         "sst_source": sst_src,
         "chlorophyll": chl,
         "chlorophyll_source": chl_src,
     }
+
+    _satellite_cache = result
+    _satellite_cache_ts = datetime.now(timezone.utc)
+    return result
+
